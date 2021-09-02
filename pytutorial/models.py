@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Create your models here.
-class PythonPost(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     created_at = models.DateField(auto_now=True)
@@ -13,7 +13,22 @@ class PythonPost(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('python-post-single', kwargs={'pk': self.pk})
+        return reverse('single-post', kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ["-created_at"]
+
+
+
+class ContentBlock(models.Model):
+    """ A block with additionnal subtitle and content for posts """
+    post = models.ForeignKey(Post, related_name='contentbock', on_delete=models.CASCADE)
+    subtitle = models.CharField(max_length=200)
+    sub_content = models.TextField()
+    created_at = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return self.subtitle
+
+    def get_absolute_url(self):
+        return reverse('single-subtitle', kwargs={'pk': self.pk})

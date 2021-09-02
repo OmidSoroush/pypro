@@ -1,6 +1,0 @@
-{% extends "blog/base.html" %}
-{% block content %}
-
-      <h2><a href="{% url 'pytutorial:python-post-single' pk=python_posts.pk %}">{{python_posts.title}}</a></h2>
-      <p>{{python_posts.content}}</p>
-{% endblock content %}

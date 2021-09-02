@@ -4,6 +4,6 @@ from . import views
 app_name = 'pytutorial'
 
 urlpatterns = [
-    path('pythontutorials/', views.PythonPostListView.as_view(), name='python-home'),
-    path('pythontutorials/<int:pk>/', views.PythonPostDetailView.as_view(), name='python-post-single'),
+    path('pythontutorials/', views.PostListView.as_view(), name='python-home'),
+    path('pythontutorials/<int:pk>/', views.PostDetailView.as_view(), name='single-subtitle'),
 ]

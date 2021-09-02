@@ -1,0 +1,6 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+      <h2><a href="{% url 'pytutorial:single-subtitle' pk=post_contents.pk %}">{{post_contents.subtitle}}</a></h2>
+      <p>{{post_contents.sub_content}}</p>
+{% endblock content %}

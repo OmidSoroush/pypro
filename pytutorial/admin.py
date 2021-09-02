@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import PythonPost
+from .models import Post, ContentBlock
 
 # Register your models here.
-admin.site.register(PythonPost)
+admin.site.register(Post)
+admin.site.register(ContentBlock)
