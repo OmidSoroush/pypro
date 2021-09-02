@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in python_posts %}
+      <h1><a href="{% url 'pytutorial:python-post-single' pk=post.pk %}">{{post.title}}</a></h1>
+
+    {% endfor %}
+{% endblock content %}

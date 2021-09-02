@@ -32,9 +32,9 @@
             <!-- Setting the links to #! will ensure that no action takes place on click. -->
             <li><a href="{% url 'blog-home' %}">Home</a></li>
             <li><a href="{% url 'blog-about' %}">About</a></li>
-            <li><a href="#!">Services</a>
+            <li><a href="#!">Tutorials</a>
               <ul class="nav-dropdown">
-                <li><a href="#!">Web Design</a></li>
+                <li><a href="{% url 'pytutorial:python-home' %}">Python</a></li>
                 <li><a href="#!">Web Development</a></li>
                 <li><a href="#!">Graphic Design</a></li>
               </ul>
