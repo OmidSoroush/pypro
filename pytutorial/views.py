@@ -16,3 +16,12 @@ class PostDetailView(DeleteView):
     model = ContentBlock
     template_name = 'pytutorial/post_detail.html'
     context_object_name = 'post_contents'
+
+
+from django.views.generic import TemplateView
+
+class PythonView(TemplateView):
+    template_name = "pytutorial/python_home.html"
+
+class IndexView(TemplateView):
+    template_name = "pytutorial/index.html"

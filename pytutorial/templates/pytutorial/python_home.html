@@ -1,0 +1,49 @@
+{% extends "blog/base.html" %}
+{% load static %}
+  {% block content %}
+  
+
+  <!-- partial:index.partial.html -->
+  <section id="two" class="i-row i-row-even">
+    <div class="container">
+      <h2 class="section-title">Accordion Two</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Fixed -->
+          <div class="panel-group accordion-2a">
+            <div class="panel panel-info">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".accordion-2a" href="#a2-a01">
+                <h4 class="panel-title">About Us <i class="fa fa-minus pull-right"></i></h4>
+              </div>
+              <div id="a2-a01" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <p>Boton jar</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".accordion-2a" href="#a2-a02">
+                <h4 class="panel-title">Who We Are <i class="fa fa-plus pull-right"></i></h4>
+              </div>
+              <div id="a2-a02" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Cheesebes</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".accordion-2a" href="#a2-a03">
+                <h4 class="panel-title">Contact Us <i class="fa fa-plus pull-right"></i></h4>
+              </div>
+              <div id="a2-a03" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>The big</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+    <!-- partial -->
+    <script  src="{% static 'blog/css/accordion.css' %}"></script>
+{% endblock %}

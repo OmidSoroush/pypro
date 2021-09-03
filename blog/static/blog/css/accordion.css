@@ -1,0 +1,21 @@
+
+
+
+/*** Content ***/
+main {}
+  .i-row { padding-top: 40px; padding-bottom: 40px; }
+  .i-row-odd { background-color: #ffffff; }
+  .i-row-even { background-color: #ffffff; }
+
+.section-title { margin-top: 0; margin-bottom: 0.6em; font-weight: 500; text-align: center;}
+.section-title .fa { margin-right: 5px; color: #6f5499; }
+
+
+/******************************************/
+
+.i-accordion .panel-heading,
+.d-accordion .panel-heading,
+.accordion-2a .panel-heading,
+.accordion-2b .panel-heading,
+.accordion-3 .panel-heading { cursor: pointer; }
+.d-accordion .panel-heading.collapsed .fa-chevron-up:before { content: '\f078'; }
