@@ -21,7 +21,7 @@ class Post(models.Model):
 
 class ContentBlock(models.Model):
     """ A block with additionnal subtitle and content for posts """
-    post = models.ForeignKey(Post, related_name='contentbock', on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name='contentblocks', on_delete=models.CASCADE)
     subtitle = models.CharField(max_length=200)
     sub_content = models.TextField()
     created_at = models.DateField(auto_now=True)

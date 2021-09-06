@@ -1,5 +1,5 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    {{post_contents.subtitle}}
+    <h2><a href="{% url 'pytutorial:single-post' pk=posts.pk %}">{{post_contents.post}}</a></h2>
     <p>{{post_contents.sub_content}}</p>
 {% endblock %}

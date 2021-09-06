@@ -7,16 +7,24 @@ from django.views.generic import (ListView, DetailView,
 
 # Create your views here.
 class PostListView(ListView):
-    model = ContentBlock
+    model = Post
     template_name = 'pytutorial/post_list.html'
     context_object_name = 'posts'
     ordering = ['-created_at']
 
+    # def get_context_data(self, **kwargs):
+    #     # Call the base implementation first to get a context
+    #     context = super().get_context_data(**kwargs)
+    #     # Add in a QuerySet of all the books
+    #     context['unique_posts'] = Post.objects.distinct()
+    #     return context
+
 
 class PostDetailView(DetailView):
-    model = ContentBlock
+    model = Post
     template_name = 'pytutorial/post_detail.html'
     context_object_name = 'post_contents'
+
 
 
 

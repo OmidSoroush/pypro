@@ -5,15 +5,18 @@
       <div class="panel-heading">
         <h4 class="panel-title">
       <a data-toggle="collapse" data-parent="#" href="#{{forloop.counter}}">
-          {{post.post.title}}
+          {{post.title}}
       </a>
         </h4>
       </div>
       <div id="{{forloop.counter}}" class="panel-collapse collapse">
+        {% for sub in post.contentblocks.all %}
         <div class="panel-body list-group">
-          <a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}" class="list-group-item">
-            {{post.post.title}}<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
+          <a href="#" class="list-group-item">
+            {{ sub }}<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
         </div>
+        {% endfor %}
+
       </div>
 
     </div>
