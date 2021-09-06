@@ -13,63 +13,19 @@
       <h3>Python Navigation</h3>
       <div class="panel-group wrap" id="bs-collapse">
 
-        <div class="panel">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#" href="#one">
-            Collapse item #1
-          </a>
-        </h4>
-          </div>
-          <div id="one" class="panel-collapse collapse">
-            <div class="panel-body list-group">
-              <a href="#" class="list-group-item">lists<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
-              <a href="#" class="list-group-item">Morbi leo risus</a>
-              <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-              <a href="#" class="list-group-item">Vestibulum at eros</a>
-            </div>
-          </div>
+        {% block title %}
 
-        </div>
-        <!-- end of panel -->
-
-        <div class="panel">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#" href="#two">
-           Collapse item #2
-          </a>
-        </h4>
-          </div>
-          <div id="two" class="panel-collapse collapse">
-            <div class="panel-body">
-              Where is the harp on the harpstring, and the red fire glowing? Where is the spring and the harvest and the tall corn growing?
-            </div>
-
-          </div>
-        </div>
-        <!-- end of panel -->
-
-        <div class="panel">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#" href="#three">
-            Collapse item #3
-          </a>
-        </h4>
-          </div>
-          <div id="three" class="panel-collapse collapse">
-            <div class="panel-body">
-              The days have gone down in the West behind the hills into shadow. Who shall gather the smoke of the deadwood burning, Or behold the flowing years from the Sea returning?
-            </div>
-          </div>
-        </div>
+        {% endblock %}
         <!-- end of panel -->
 
       </div>
       <!-- end of #bs-collapse  -->
 
     </div>
+
+    {% block post_content %}
+
+    {% endblock %}
 
     </script><script  src="{% static 'blog/js/accordion.js' %}"></script>
 

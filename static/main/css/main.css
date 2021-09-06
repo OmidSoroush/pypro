@@ -9,11 +9,11 @@ h2 {
 	color: black;
 }
 p {
-	font-size: 16px;
+	font-size: 18px;
 	color: #cdcdcd;
 }
 .navbar {
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 .jumbotron {
@@ -60,7 +60,7 @@ p {
 }
 .glyphicon {
 	font-size: 25px;
-	color: green;
+	color: #27A967;
 }
 
 .glyphicon:hover {

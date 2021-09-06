@@ -1,7 +1,30 @@
-{% extends "blog/base.html" %}
-{% block content %}
-    {% for post in posts %}
-      <h1><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.title}}</a></h1>
-      <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p>
-    {% endfor %}
+{% extends "pytutorial/python_home.html" %}
+{% block title %}
+  {% for post in posts %}
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#" href="#{{forloop.counter}}">
+          {{post.post.title}}
+      </a>
+        </h4>
+      </div>
+      <div id="{{forloop.counter}}" class="panel-collapse collapse">
+        <div class="panel-body list-group">
+          <a href="#" class="list-group-item">lists<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
+        </div>
+      </div>
+
+    </div>
+  {% endfor %}
 {% endblock %}
+
+{% block post_content %}
+  {% for post in posts  %}
+    <p>{{post.post.content}}</p>
+  {% endfor %}
+
+{% endblock %}
+
+
+{# <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p> #}
