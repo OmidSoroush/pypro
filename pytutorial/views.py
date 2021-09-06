@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post, ContentBlock
+from django.views.generic import TemplateView
 from django.views.generic import (ListView, DetailView,
                                   CreateView, UpdateView, DeleteView)
 
@@ -12,13 +13,12 @@ class PostListView(ListView):
     ordering = ['-created_at']
 
 
-class PostDetailView(DeleteView):
+class PostDetailView(DetailView):
     model = ContentBlock
     template_name = 'pytutorial/post_detail.html'
     context_object_name = 'post_contents'
 
 
-from django.views.generic import TemplateView
 
 class PythonView(TemplateView):
     template_name = "pytutorial/python_home.html"

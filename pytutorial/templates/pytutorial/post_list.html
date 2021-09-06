@@ -11,7 +11,8 @@
       </div>
       <div id="{{forloop.counter}}" class="panel-collapse collapse">
         <div class="panel-body list-group">
-          <a href="#" class="list-group-item">lists<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
+          <a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}" class="list-group-item">
+            {{post.post.title}}<span class="pull-right glyphicon glyphicon-menu-right"></span></a>
         </div>
       </div>
 
@@ -19,12 +20,6 @@
   {% endfor %}
 {% endblock %}
 
-{% block post_content %}
-  {% for post in posts  %}
-    <p>{{post.post.content}}</p>
-  {% endfor %}
-
-{% endblock %}
 
 
 {# <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p> #}
