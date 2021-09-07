@@ -8,25 +8,24 @@
 
 
   <!-- partial:index.partial.html -->
-  <div class="container accor_postion">
+  <div class="accor_postion">
     <div class="col-md-6 col-sm-6">
       <h3>Python Navigation</h3>
       <div class="panel-group wrap" id="bs-collapse">
 
-        {% block accordion %}
-
-        {% endblock %}
+        {% block accordion %}{% endblock %}
         <!-- end of panel -->
 
       </div>
       <!-- end of #bs-collapse  -->
 
     </div>
+  </div>
 
-    {% block paragraph %}
+  {% block paragraph %}
 
-    {% endblock %}
+  {% endblock %}
 
-    </script><script  src="{% static 'blog/js/accordion.js' %}"></script>
+    <script src="{% static 'blog/js/accordion.js' %}"></script>
 
 {% endblock %}
