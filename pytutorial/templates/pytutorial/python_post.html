@@ -1,17 +1,19 @@
 {% extends "pytutorial/python_home.html" %}
 {% block accordion %}
+<div class="accordion" id="accordionPanelsStayOpenExample">
+
     {% for post in posts %}
-    <div class="lex-shrink-0 p-3 bg-white">
+    <div class="flex-shrink-0 bg-white">
       <h2 class="accordion-header" id="panelsStayOpen-heading{{forloop.counter}}">
-        <button class="d-inline-flex btn btn-toggle align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{forloop.counter}}" aria-expanded="true" aria-controls="panelsStayOpen-collapse{{forloop.counter}}">
+        <button class="collapsed btn btn-toggle align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{forloop.counter}}" aria-expanded="false" aria-controls="panelsStayOpen-collapse{{forloop.counter}}">
           {{post.title}}
         </button>
       </h2>
-      <div id="panelsStayOpen-collapse{{forloop.counter}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{forloop.counter}}">
+      <div id="panelsStayOpen-collapse{{forloop.counter}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{forloop.counter}}">
         {% for sub in post.contentblocks.all %}
         <div class="accordion-body">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li class="link-dark rounded"><a href="{% url 'pytutorial:single-subtitle' pk=sub.pk %}" class="d-inline-flex list-item btn btn-toggle rounded btn-toggle align-items-center collapsed" aria-current="page">{{ sub.subtitle }}</a></li>
+            <li class="link-dark rounded"><a href="{% url 'pytutorial:single-subtitle' pk=sub.pk %}" class="accordion-collapse d-inline-flex list-item btn btn-toggle rounded btn-toggle align-items-center collapsed" aria-current="page">{{ sub.subtitle }}</a></li>
           </ul>
         </div>
         {% endfor %}
