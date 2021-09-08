@@ -8,3 +8,7 @@ class HomePage(TemplateView):
 # About page
 class AboutPage(TemplateView):
     template_name = 'blog/about.html'
+
+# tutorials page
+class TutorialsPage(TemplateView):
+    template_name = 'blog/tutorials.html'

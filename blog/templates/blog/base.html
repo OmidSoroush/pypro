@@ -52,7 +52,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'blog-home' %}">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'blog-about' %}">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Tutorials</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'blog-tutorials' %}">Tutorials</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -79,6 +79,8 @@
   <main id="main">
 
   {% block about %}{% endblock about %}
+
+  {% block tutorials %}{% endblock tutorials %}
     <!-- ======= Contact Section ======= -->
     <section id="contact">
       <div class="container">
