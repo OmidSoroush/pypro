@@ -1,0 +1,38 @@
+{% extends "pytutorial/python_home.html" %}
+{% block accordion %}
+    {% for post in posts %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-heading{{forloop.counter}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{forloop.counter}}" aria-expanded="true" aria-controls="panelsStayOpen-collapse{{forloop.counter}}">
+          {{post.title}}
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapse{{forloop.counter}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{forloop.counter}}">
+        {% for sub in post.contentblocks.all %}
+        <div class="accordion-body">
+          <ul class="list-unstyled fw-normal pb-1 small">
+            <li><a href="" class="d-inline-flex align-items-center rounded list-item" aria-current="page">{{ sub.subtitle }}<i class="bi bi-chevron-right"></i></a></li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-9 content order-lg-2 order-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+{# <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p> #}

@@ -8,7 +8,7 @@ from django.views.generic import (ListView, DetailView,
 # Create your views here.
 class PostListView(ListView):
     model = Post
-    template_name = 'pytutorial/post_list.html'
+    template_name = 'pytutorial/python_post.html'
     context_object_name = 'posts'
     ordering = ['-created_at']
 
@@ -24,8 +24,6 @@ class PostDetailView(DetailView):
     model = ContentBlock
     template_name = 'pytutorial/post_detail.html'
     context_object_name = 'post_contents'
-
-
 
 
 class PythonView(TemplateView):

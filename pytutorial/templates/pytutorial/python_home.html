@@ -1,31 +1,18 @@
 {% extends "blog/base.html" %}
-{% load static %}
-  {% block content %}
+{% block python %}
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'blog/css/accordion.css'%}">
+  <section id="pythonpage">
+    <div class="row accordion1">
+      <div class="col-lg-3 navigator order-lg-1 order-2">
 
-
-  <!-- partial:index.partial.html -->
-  <div class="accor_postion">
-    <div class="col-md-6 col-sm-6">
-      <h3>Python Navigation</h3>
-      <div class="panel-group wrap" id="bs-collapse">
-
-        {% block accordion %}{% endblock %}
-        <!-- end of panel -->
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          {% block accordion %}{% endblock %}
+        </div>
 
       </div>
-      <!-- end of #bs-collapse  -->
 
+      {% block content %}{% endblock %}
     </div>
-  </div>
-
-  {% block paragraph %}
-
-  {% endblock %}
-
-    <script src="{% static 'blog/js/accordion.js' %}"></script>
+  </section>
 
 {% endblock %}
