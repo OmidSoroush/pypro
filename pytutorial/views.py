@@ -22,7 +22,7 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = ContentBlock
-    template_name = 'pytutorial/post_detail.html'
+    template_name = 'pytutorial/python_detail.html'
     context_object_name = 'post_contents'
 
 
