@@ -1,9 +1,9 @@
 {% extends "pytutorial/python_post.html" %}
 {% block content %}
-    <div class="col-lg-9 content order-lg-2 order-1">
-      <p>foo</p>
-          {% for each in unique_posts %}
-            {{each.title}}
-          {% endfor %}
-    </div>
+  <div class="col-lg-9 content order-lg-2 order-1">
+    <p>foo</p>
+        {% for element in unique_posts %}
+          {{element}}
+        {% endfor %}
+  </div>
 {% endblock %}

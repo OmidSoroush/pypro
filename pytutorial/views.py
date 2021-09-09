@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post, ContentBlock
 from django.views.generic import TemplateView
 from django.views.generic import (ListView, DetailView,
@@ -27,14 +27,15 @@ class PostListView2(ListView):
     context_object_name = 'posts'
     ordering = ['-created_at']
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(PostListView2, self).get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
-        context['unique_posts'] = Post.objects.all()
+
+    # def get_queryset(self):
+    #     qs = super(PostListView2, self).get_queryset()
+    #     return qs.filter(id=self.kwargs.get('pk'))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['unique_posts'] = ContentBlock.objects.filter(id=self.kwargs.get('pk'))
         return context
-
-
     # In case you want to filter the queryset differently for different web requests
     # def get_queryset(self):
     #     return ContentBlock.objects.filter(subtitle=self.request.user)
