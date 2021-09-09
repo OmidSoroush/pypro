@@ -29,13 +29,13 @@ class PostListView2(ListView):
 
 
     # def get_queryset(self):
-    #     qs = super(PostListView2, self).get_queryset()
-    #     return qs.filter(id=self.kwargs.get('pk'))
+    #     return Post.objects.filter(author=self.request.user)
+    #
 
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['unique_posts'] = ContentBlock.objects.filter(id=self.kwargs.get('pk'))
-        return context
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super().get_context_data(*args, **kwargs)
+    #     context['unique_posts'] = ContentBlock.objects.get(slug=self.kwargs.get("slug"))
+    #     return context
     # In case you want to filter the queryset differently for different web requests
     # def get_queryset(self):
     #     return ContentBlock.objects.filter(subtitle=self.request.user)

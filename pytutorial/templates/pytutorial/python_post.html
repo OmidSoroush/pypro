@@ -14,7 +14,7 @@
       <div class="collapse" id="home-collapse{{forloop.counter}}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           {% for sub in post.contentblocks.all %}
-          <li><a href="{{ post.get_absolute_url }}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          <li><a href="{{ sub.get_absolute_url }}" class="link-dark rounded">{{sub.subtitle}}</a></li>
           {% endfor %}
         </ul>
       </div>
