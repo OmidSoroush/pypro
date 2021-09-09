@@ -1,28 +1,49 @@
 {% extends "pytutorial/python_home.html" %}
 {% block accordion %}
-<div class="accordion" id="accordionPanelsStayOpenExample">
+<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+  <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+    <span class="fs-5 fw-semibold">Collapsible</span>
+  </a>
+  <ul class="list-unstyled ps-0">
 
     {% for post in posts %}
-    <div class="flex-shrink-0 bg-white">
-      <h2 class="accordion-header" id="panelsStayOpen-heading{{forloop.counter}}">
-        <button class="collapsed btn btn-toggle align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{forloop.counter}}" aria-expanded="false" aria-controls="panelsStayOpen-collapse{{forloop.counter}}">
-          {{post.title}}
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapse{{forloop.counter}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{forloop.counter}}">
-        {% for sub in post.contentblocks.all %}
-        <div class="accordion-body">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li class="link-dark rounded"><a href="{% url 'pytutorial:single-subtitle' pk=sub.pk %}" class="accordion-collapse d-inline-flex list-item btn btn-toggle rounded btn-toggle align-items-center collapsed" aria-current="page">{{ sub.subtitle }}</a></li>
-          </ul>
-        </div>
-        {% endfor %}
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse{{forloop.counter}}" aria-expanded="false">
+        {{post.title}}
+      </button>
+      <div class="collapse" id="home-collapse{{forloop.counter}}">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          {% for sub in post.contentblocks.all %}
+          <li><a href="{% url 'pytutorial:single-post' pk=sub.pk %}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
+    </li>
     {% endfor %}
 
-{% endblock %}
 
+    <li class="border-top my-3"></li>
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+        Account
+      </button>
+      <div class="collapse" id="account-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="#" class="link-dark rounded">New...</a></li>
+          <li><a href="#" class="link-dark rounded">Profile</a></li>
+          <li><a href="#" class="link-dark rounded">Settings</a></li>
+          <li><a href="#" class="link-dark rounded">Sign out</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+
+{% endblock %}
+{% block content %}
+
+{% endblock %}
 
 
 
