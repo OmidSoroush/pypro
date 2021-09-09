@@ -6,7 +6,6 @@
     <span class="fs-5 fw-semibold">Collapsible</span>
   </a>
   <ul class="list-unstyled ps-0">
-
     {% for post in posts %}
     <li class="mb-1">
       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse{{forloop.counter}}" aria-expanded="false">
@@ -15,13 +14,12 @@
       <div class="collapse" id="home-collapse{{forloop.counter}}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           {% for sub in post.contentblocks.all %}
-          <li><a href="{% url 'pytutorial:single-post' pk=sub.pk %}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          <li><a href="{{ post.get_absolute_url }}" class="link-dark rounded">{{sub.subtitle}}</a></li>
           {% endfor %}
         </ul>
       </div>
     </li>
     {% endfor %}
-
 
     <li class="border-top my-3"></li>
     <li class="mb-1">

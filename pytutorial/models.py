@@ -12,7 +12,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('single-post', kwargs={'pk': self.pk})
+        return reverse('pytutorial:single-post', kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ["-created_at"]
@@ -30,4 +30,4 @@ class ContentBlock(models.Model):
         return self.subtitle
 
     def get_absolute_url(self):
-        return reverse('single-subtitle', kwargs={'pk': self.pk})
+        return reverse('pytutorial:single-subtitle', kwargs={'pk': self.pk})

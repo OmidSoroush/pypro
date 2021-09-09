@@ -2,8 +2,12 @@
 {% block content %}
     <div class="col-lg-9 content order-lg-2 order-1">
       <p>{{post_contents.created_at}}</p>
-      <h3><a href="{% url 'pytutorial:single-subtitle' pk=post_contents.pk %}">{{post_contents.post}}</a></h3>
+      <h3><a href="#">{{post_contents.post}}</a></h3>
       <p>{{post_contents.sub_content}}</p>
+      {% for k in content_list %}
+      <p>{{k.post}}</p>
+
+      {% endfor %}
     </div>
 
 {% endblock %}

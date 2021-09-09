@@ -15,10 +15,11 @@ class PostListView(ListView):
 
     # def get_context_data(self, **kwargs):
     #     # Call the base implementation first to get a context
-    #     context = super().get_context_data(**kwargs)
+    #     context = super(PostListView, self).get_context_data(**kwargs)
     #     # Add in a QuerySet of all the books
-    #     context['unique_posts'] = Post.objects.distinct()
+    #     context['unique_posts'] = Post.objects.filter(id=self.kwargs.get('pk'))
     #     return context
+
 
 class PostListView2(ListView):
     model = Post
@@ -26,11 +27,18 @@ class PostListView2(ListView):
     context_object_name = 'posts'
     ordering = ['-created_at']
 
-
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['single_post'] = Post.objects.get(id=self.kwargs['pk'])
+        # Call the base implementation first to get a context
+        context = super(PostListView2, self).get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+        context['unique_posts'] = Post.objects.all()
         return context
+
+
+    # In case you want to filter the queryset differently for different web requests
+    # def get_queryset(self):
+    #     return ContentBlock.objects.filter(subtitle=self.request.user)
+
 
 
 
@@ -38,6 +46,12 @@ class PostDetailView(DetailView):
     model = ContentBlock
     template_name = 'pytutorial/python_detail.html'
     context_object_name = 'post_contents'
+
+    # get a list of all (by default DetailView provides singlewise data)
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostDetailView, self).get_context_data(*args, **kwargs)
+        context['content_list'] = ContentBlock.objects.all()
+        return context
 
 
 class PythonView(TemplateView):
