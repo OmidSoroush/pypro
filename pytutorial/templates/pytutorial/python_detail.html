@@ -1,13 +1,60 @@
-{% extends "pytutorial/python_post.html" %}
-{% block content %}
-    <div class="col-lg-9 content order-lg-2 order-1">
-      <p>{{post_contents.created_at}}</p>
-      <h3><a href="#">{{post_contents.post}}</a></h3>
-      <p>{{post_contents.sub_content}}</p>
-      {% for k in content_list %}
-      <p>{{k.post}}</p>
-
+{% extends "pytutorial/python_home.html" %}
+{% block accordion %}
+<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+  <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+    <span class="fs-5 fw-semibold">Collapsible</span>
+  </a>
+  <ul class="list-unstyled ps-0">
+    {% for title in unique_title %}
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse{{forloop.counter}}" aria-expanded="false">
+        {{title.post}}
+      </button>
       {% endfor %}
-    </div>
+      {% for content in content_list %}
+      <div class="collapse" id="home-collapse{{forloop.counter}}">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="{% url 'pytutorial:single-detail' slug=content.slug %}" class="link-dark rounded">{{content.subtitle}}</a></li>
+        </ul>
+      </div>
+    </li>
+    {% endfor %}
+
+    <li class="border-top my-3"></li>
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+        Account
+      </button>
+      <div class="collapse" id="account-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="#" class="link-dark rounded">New...</a></li>
+          <li><a href="#" class="link-dark rounded">Profile</a></li>
+          <li><a href="#" class="link-dark rounded">Settings</a></li>
+          <li><a href="#" class="link-dark rounded">Sign out</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
 
 {% endblock %}
+{% block content %}
+  <div class="col-lg-9 content order-lg-2 order-1">
+    <p>{{post_contents.created_at}}</p>
+    <h3><a href="#">{{post_contents.subtitle}}</a></h3>
+    <p>{{post_contents.sub_content}}</p>
+  </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{# <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p> #}

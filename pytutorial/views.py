@@ -27,19 +27,16 @@ class PostListView2(ListView):
     context_object_name = 'posts'
     ordering = ['-created_at']
 
-
     # def get_queryset(self):
     #     return Post.objects.filter(author=self.request.user)
-    #
 
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super().get_context_data(*args, **kwargs)
-    #     context['unique_posts'] = ContentBlock.objects.get(slug=self.kwargs.get("slug"))
-    #     return context
-    # In case you want to filter the queryset differently for different web requests
-    # def get_queryset(self):
-    #     return ContentBlock.objects.filter(subtitle=self.request.user)
-
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(PostListView2, self).get_context_data(**kwargs)
+        # Add in a QuerySet
+        #context['unique_posts'] = Post.objects.get(slug=self.kwargs.get('slug'))
+        context['unique_posts'] = ContentBlock.objects.select_related('post').get(slug=self.kwargs.get('slug'))
+        return context
 
 
 
@@ -51,6 +48,7 @@ class PostDetailView(DetailView):
     # get a list of all (by default DetailView provides singlewise data)
     def get_context_data(self, *args, **kwargs):
         context = super(PostDetailView, self).get_context_data(*args, **kwargs)
+        context['unique_title'] = ContentBlock.objects.all().values('post').distinct()
         context['content_list'] = ContentBlock.objects.all()
         return context
 

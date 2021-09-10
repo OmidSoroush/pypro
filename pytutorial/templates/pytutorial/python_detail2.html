@@ -1,0 +1,13 @@
+{% extends "pytutorial/python_post.html" %}
+{% block content %}
+    <div class="col-lg-9 content order-lg-2 order-1">
+      <p>{{post_contents.created_at}}</p>
+      <h3><a href="#">{{post_contents.subtitle}}</a></h3>
+      <p>{{post_contents.sub_content}}</p>
+      {% for k in content_list %}
+      <p>{{k.post}}</p>
+
+      {% endfor %}
+    </div>
+
+{% endblock %}

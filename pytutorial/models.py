@@ -23,7 +23,7 @@ class Post(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse('pytutorial:single-post', kwargs={"slug": self.slug})
+        return reverse('pytutorial:single-subtitle', kwargs={"slug": self.slug})
 
     class Meta:
         ordering = ["-created_at"]
@@ -36,7 +36,7 @@ class ContentBlock(models.Model):
     subtitle = models.CharField(max_length=200)
     sub_content = models.TextField()
     created_at = models.DateField(auto_now=True)
-    slug = models.SlugField(max_length=200, blank=True)
+    slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
 
     def __str__(self):
         return self.subtitle
@@ -47,4 +47,4 @@ class ContentBlock(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('pytutorial:single-subtitle', kwargs={'slug': self.slug})
+        return reverse('pytutorial:single-detail', kwargs={'slug': self.slug})
