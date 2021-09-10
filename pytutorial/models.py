@@ -22,8 +22,8 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
 
-    def get_absolute_url(self):
-        return reverse('pytutorial:single-subtitle', kwargs={"slug": self.slug})
+    # def get_absolute_url(self):
+    #     return reverse('pytutorial:single-subtitle', kwargs={"slug": self.slug})
 
     class Meta:
         ordering = ["-created_at"]

@@ -7,11 +7,11 @@ from django.views.generic.detail import SingleObjectMixin
 
 
 # Create your views here.
-class PostListView(ListView):
-    model = Post
-    template_name = 'pytutorial/python_post.html'
-    context_object_name = 'posts'
-    ordering = ['-created_at']
+# class PostListView(ListView):
+#     model = Post
+#     template_name = 'pytutorial/python_post.html'
+#     context_object_name = 'posts'
+#     ordering = ['-created_at']
 
     # def get_context_data(self, **kwargs):
     #     # Call the base implementation first to get a context
@@ -20,23 +20,18 @@ class PostListView(ListView):
     #     context['unique_posts'] = Post.objects.filter(id=self.kwargs.get('pk'))
     #     return context
 
-
-class PostListView2(ListView):
-    model = Post
-    template_name = 'pytutorial/python_post2.html'
-    context_object_name = 'posts'
-    ordering = ['-created_at']
-
-    # def get_queryset(self):
-    #     return Post.objects.filter(author=self.request.user)
-
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(PostListView2, self).get_context_data(**kwargs)
-        # Add in a QuerySet
-        #context['unique_posts'] = Post.objects.get(slug=self.kwargs.get('slug'))
-        context['unique_posts'] = ContentBlock.objects.select_related('post').get(slug=self.kwargs.get('slug'))
-        return context
+# class PostListView2(ListView):
+#     model = Post
+#     template_name = 'pytutorial/python_post2.html'
+#     context_object_name = 'posts'
+#     ordering = ['-created_at']
+#
+#     def get_context_data(self, **kwargs):
+#         # Call the base implementation first to get a context
+#         context = super(PostListView2, self).get_context_data(**kwargs)
+#         # Add in a QuerySet
+#         context['unique_posts'] = ContentBlock.objects.select_related('post').get(slug=self.kwargs.get('slug'))
+#         return context
 
 
 

@@ -1,4 +1,4 @@
-{% extends "pytutorial/python_home.html" %}
+{# {% extends "pytutorial/python_home.html" %}
 {% block accordion %}
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
   <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
@@ -14,7 +14,7 @@
       <div class="collapse" id="home-collapse{{forloop.counter}}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           {% for sub in post.contentblocks.all %}
-          <li><a href="{% url 'pytutorial:single-subtitle' slug=sub.slug %}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          <li><a href="#" class="link-dark rounded">{{sub.subtitle}}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -40,16 +40,12 @@
 
 {% endblock %}
 {% block content %}
-  
-{% endblock %}
-
-
-
-
-
-
-
-
-
-
-{# <p><a href="{% url 'pytutorial:single-subtitle' pk=post.pk %}">{{post.post.content}}</a></p> #}
+    <div class="col-lg-9 content order-lg-2 order-1">
+      <p>{{post_contents.created_at}}</p>
+      <h3><a href="#">{{post_contents.subtitle}}</a></h3>
+      <p>{{post_contents.sub_content}}</p>
+      {% for k in content_list %}
+      <p>{{k.post}}</p>
+      {% endfor %}
+    </div>
+{% endblock %} #}
