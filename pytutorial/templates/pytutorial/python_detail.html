@@ -6,16 +6,16 @@
     <span class="fs-5 fw-semibold">Collapsible</span>
   </a>
   <ul class="list-unstyled ps-0">
-    {% for title in unique_title %}
+    {% for post in posts %}
     <li class="mb-1">
       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse{{forloop.counter}}" aria-expanded="false">
-        {{title.post}}
+        {{post.title}}
       </button>
-      {% endfor %}
-      {% for content in content_list %}
       <div class="collapse" id="home-collapse{{forloop.counter}}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="{% url 'pytutorial:single-detail' slug=content.slug %}" class="link-dark rounded">{{content.subtitle}}</a></li>
+          {% for sub in post.contentblocks.all %}
+          <li><a href="{% url 'pytutorial:single-detail' slug=sub.slug %}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </li>
@@ -39,11 +39,12 @@
 </div>
 
 {% endblock %}
+
 {% block content %}
   <div class="col-lg-9 content order-lg-2 order-1">
-    <p>{{post_contents.created_at}}</p>
+    {# <p>{{post_contents.created_at}}</p>
     <h3><a href="#">{{post_contents.subtitle}}</a></h3>
-    <p>{{post_contents.sub_content}}</p>
+    <p>{{post_contents.sub_content}}</p> #}
   </div>
 
 {% endblock %}

@@ -48,8 +48,10 @@ class PostDetailView(DetailView):
     # get a list of all (by default DetailView provides singlewise data)
     def get_context_data(self, *args, **kwargs):
         context = super(PostDetailView, self).get_context_data(*args, **kwargs)
-        context['unique_title'] = ContentBlock.objects.all().values('post').distinct()
-        context['content_list'] = ContentBlock.objects.all()
+        context['posts'] = Post.objects.all()
+        #context['content_list'] = ContentBlock.objects.all()
+        #context['b'] = ContentBlock.objects.select_related('post').all() # Forward ForeignKey relationship
+        #context['a'] = Post.objects.prefetch_related('contentblocks').all()
         return context
 
 
