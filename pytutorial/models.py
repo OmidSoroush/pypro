@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from tinymce.models import HTMLField
+
 
 import misaka
 
@@ -34,7 +36,7 @@ class ContentBlock(models.Model):
     """ A block with additionnal subtitle and content for posts """
     post = models.ForeignKey(Post, related_name='contentblocks', on_delete=models.CASCADE)
     subtitle = models.CharField(max_length=200)
-    sub_content = models.TextField()
+    sub_content = HTMLField()
     created_at = models.DateField(auto_now=True)
     slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
 

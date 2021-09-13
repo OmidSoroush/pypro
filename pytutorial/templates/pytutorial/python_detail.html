@@ -14,7 +14,7 @@
       <div class="collapse" id="home-collapse{{forloop.counter}}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           {% for sub in post.contentblocks.all %}
-          <li><a href="{% url 'pytutorial:single-detail' slug=sub.slug %}" class="link-dark rounded">{{sub.subtitle}}</a></li>
+          <li><a href="{% url 'pytutorial:single-detail' slug=sub.slug %}" class="d-inline-flex align-items-center rounded">{{sub.subtitle}}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -41,14 +41,15 @@
 {% endblock %}
 
 {% block content %}
+
   <div class="col-lg-9 content order-lg-2 order-1">
-    {# <p>{{post_contents.created_at}}</p>
+    <p>{{post_contents.created_at}}</p>
     <h3><a href="#">{{post_contents.subtitle}}</a></h3>
-    <p>{{post_contents.sub_content}}</p> #}
+    {{post_contents.sub_content|safe}}
+
   </div>
 
 {% endblock %}
-
 
 
 
