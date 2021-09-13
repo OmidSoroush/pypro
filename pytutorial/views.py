@@ -4,6 +4,9 @@ from django.views.generic import TemplateView
 from django.views.generic import (ListView, DetailView,
                                   CreateView, UpdateView, DeleteView)
 from django.views.generic.detail import SingleObjectMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from .forms import PostForm
+
 
 
 # Create your views here.
@@ -48,6 +51,20 @@ class PostDetailView(DetailView):
         #context['b'] = ContentBlock.objects.select_related('post').all() # Forward ForeignKey relationship
         #context['a'] = Post.objects.prefetch_related('contentblocks').all()
         return context
+
+
+
+class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.is_superuser
+
+
+class CreatePostView(SuperUserRequiredMixin, CreateView):
+    login_url = '/login/'
+    redirect_field_name = 'blog/post_detail.html'
+
+    form_class = PostForm
+    model = ContentBlock
 
 
 class PythonView(TemplateView):

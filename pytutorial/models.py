@@ -5,9 +5,6 @@ from django.utils.text import slugify
 from django_quill.fields import QuillField
 
 
-
-
-
 import misaka
 
 # Create your models here.

@@ -29,11 +29,12 @@
 
   <!-- Add the theme's stylesheet -->
   <!-- Include your favorite highlight.js stylesheet -->
+  {{ form.media }}
+  {% include 'django_quill/media.html' %}
   <link href="highlight.js/monokai-sublime.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
   <link href="{% static 'blog/quill/quill.css' %}" rel="stylesheet">
-  {% include 'django_quill/media.html' %}
-  {{ form.media }}
+
 
   <!-- =======================================================
   * Template Name: Regna - v4.3.0
@@ -75,6 +76,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'pytutorial:post_new' %}">New Python Post</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -89,7 +91,8 @@
 
   {% block tutorials %}{% endblock tutorials %}
 
-  {% block python %} <textarea></textarea> {% endblock %}
+  {% block python %}{% endblock %}
+  {% block createform %}{% endblock %}
 
     <!-- ======= Contact Section ======= -->
     <section id="contact">

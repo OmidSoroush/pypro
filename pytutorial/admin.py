@@ -3,7 +3,7 @@ from .models import Post, ContentBlock
 
 
 @admin.register(ContentBlock)
-class QuillPostAdmin(admin.ModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     pass
 
 # Register your models here.
