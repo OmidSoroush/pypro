@@ -2,9 +2,15 @@ from django import forms
 from .models import ContentBlock
 
 
-class BlogAdminForm(forms.ModelForm):
-    sub_content = forms.CharField(widget=forms.Textarea(attrs={'id': "richtext_field"}))
 
+class QuillPostForm(forms.ModelForm):
     class Meta:
         model = ContentBlock
-        fields = ('post', 'subtitle', 'sub_content')
+        fields = (
+            'sub_content',
+        )
+
+
+
+#client id: 8c5f651e0834ce0
+#client secret: 8c86f1991295ff288c4ed3f28b65a729fc50de62

@@ -1,4 +1,6 @@
 {% extends "pytutorial/python_home.html" %}
+{% load static %}
+
 {% block accordion %}
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
   <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
@@ -45,8 +47,7 @@
   <div class="col-lg-9 content order-lg-2 order-1">
     <p>{{post_contents.created_at}}</p>
     <h3><a href="#">{{post_contents.subtitle}}</a></h3>
-    {{post_contents.sub_content|safe}}
-
+    <p>{{post_contents.sub_content.html|safe}}</p>
   </div>
 
 {% endblock %}
