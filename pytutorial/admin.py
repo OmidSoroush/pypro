@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Post, ContentBlock
+from .models import Post
 
 
-@admin.register(ContentBlock)
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     pass
 
 # Register your models here.
-admin.site.register(Post)
+#admin.site.register(Post)

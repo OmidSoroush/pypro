@@ -1,4 +1,6 @@
-{# {% extends "pytutorial/python_home.html" %}
+{% extends "pytutorial/python_home.html" %}
+{% load static %}
+
 {% block accordion %}
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
   <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
@@ -8,16 +10,9 @@
   <ul class="list-unstyled ps-0">
     {% for post in posts %}
     <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse{{forloop.counter}}" aria-expanded="false">
+      <a href="{% url 'pytutorial:post_list' slug=post.slug %}" class="btn btn-toggle align-items-center rounded collapsed" role="button">
         {{post.title}}
-      </button>
-      <div class="collapse" id="home-collapse{{forloop.counter}}">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          {% for sub in post.contentblocks.all %}
-          <li><a href="#" class="link-dark rounded">{{sub.subtitle}}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
+      </a>
     </li>
     {% endfor %}
 
@@ -39,13 +34,13 @@
 </div>
 
 {% endblock %}
+
 {% block content %}
-    <div class="col-lg-9 content order-lg-2 order-1">
-      <p>{{post_contents.created_at}}</p>
-      <h3><a href="#">{{post_contents.subtitle}}</a></h3>
-      <p>{{post_contents.sub_content}}</p>
-      {% for k in content_list %}
-      <p>{{k.post}}</p>
-      {% endfor %}
-    </div>
-{% endblock %} #}
+
+  <div class="col-lg-9 content order-lg-2 order-1">
+    <p>{{single_posts.created_at}}</p>
+    <a href="{% url 'pytutorial:single-detail' slug=single_posts.slug %}">{{single_posts.title}}</a>
+    <p>{{single_posts.content.html|safe}}</p>
+  </div>
+
+{% endblock %}

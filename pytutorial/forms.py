@@ -1,16 +1,15 @@
 from django import forms
-from .models import ContentBlock
+from .models import Post
 
 
 
 class PostForm(forms.ModelForm):
     class Meta:
-        model = ContentBlock
-        fields = ('post', 'subtitle', 'sub_content')
+        model = Post
+        fields = ('title', 'content')
 
         widgets = {
-            'post': forms.TextInput(attrs={'class': 'textinputclass'}),
-            'subtitle': forms.Textarea(attrs={'class': 'textinputclass'}),
+            'title': forms.TextInput(attrs={'class': 'textinputclass'}),
         }
 
 #client id: 8c5f651e0834ce0

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, ContentBlock
+from .models import Post
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.views.generic import (ListView, DetailView,
@@ -11,37 +11,31 @@ from django.urls import reverse_lazy
 
 
 
-# Create your views here.
-# class PostListView(ListView):
-#     model = Post
-#     template_name = 'pytutorial/python_post.html'
-#     context_object_name = 'posts'
-#     ordering = ['-created_at']
+class PythonView(TemplateView):
+    template_name = "pytutorial/python_home.html"
 
-    # def get_context_data(self, **kwargs):
-    #     # Call the base implementation first to get a context
-    #     context = super(PostListView, self).get_context_data(**kwargs)
-    #     # Add in a QuerySet of all the books
-    #     context['unique_posts'] = Post.objects.filter(id=self.kwargs.get('pk'))
-    #     return context
+class IndexView(TemplateView):
+    template_name = "pytutorial/index.html"
 
-# class PostListView2(ListView):
-#     model = Post
-#     template_name = 'pytutorial/python_post2.html'
-#     context_object_name = 'posts'
-#     ordering = ['-created_at']
-#
-#     def get_context_data(self, **kwargs):
-#         # Call the base implementation first to get a context
-#         context = super(PostListView2, self).get_context_data(**kwargs)
-#         # Add in a QuerySet
-#         context['unique_posts'] = ContentBlock.objects.select_related('post').get(slug=self.kwargs.get('slug'))
-#         return context
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'pytutorial/python_list.html'
+    context_object_name = 'posts'
+    ordering = ['-created_at']
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(PostListView, self).get_context_data(**kwargs)
+        # Add in a QuerySet
+        context['single_posts'] = Post.objects.get(slug=self.kwargs.get('slug'))
+        return context
+
 
 
 
 class PostDetailView(DetailView):
-    model = ContentBlock
+    model = Post
     template_name = 'pytutorial/python_detail.html'
     context_object_name = 'post_contents'
 
@@ -54,15 +48,6 @@ class PostDetailView(DetailView):
         #context['a'] = Post.objects.prefetch_related('contentblocks').all()
         return context
 
-
-class PythonView(TemplateView):
-    template_name = "pytutorial/python_home.html"
-
-class IndexView(TemplateView):
-    template_name = "pytutorial/index.html"
-
-
-
 class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
     def test_func(self):
         return self.request.user.is_superuser
@@ -72,32 +57,35 @@ class CreatePostView(SuperUserRequiredMixin, CreateView):
     login_url = '/login/'
     redirect_field_name = 'blog/python_detail.html'
     form_class = PostForm
-    model = ContentBlock
+    model = Post
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class PostUpdateView(SuperUserRequiredMixin,UpdateView):
     login_url = '/login/'
     redirect_field_name = 'blog/python_detail.html'
     form_class = PostForm
-    model = ContentBlock
+    model = Post
 
 
 class PostDeleteView(SuperUserRequiredMixin,DeleteView):
-    model = ContentBlock
+    model = Post
     success_url = reverse_lazy('single-detail')
 
 class DraftListView(SuperUserRequiredMixin,ListView):
     login_url = '/login/'
-    redirect_field_name = 'pytutorial/post_draft_list.html'
-    model = ContentBlock
-    template_name = 'pytutorial/python_detail.html'
+    redirect_field_name = 'pytutorial/python_detail.html'
+    model = Post
 
     def get_queryset(self):
-        return ContentBlock.objects.filter(published_date__isnull=True).order_by('created_at')
+        return Post.objects.filter(published_date__isnull=True).order_by('created_at')
 
 
 @login_required
 def post_publish(request, slug):
-    post = get_object_or_404(ContentBlock, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
     post.publish()
     return redirect('single-detail', slug=slug)

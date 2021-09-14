@@ -3,40 +3,14 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django_quill.fields import QuillField
-
-
 import misaka
 
-# Create your models here.
+
+
 class Post(models.Model):
-    title = models.CharField(max_length=200)
-    created_at = models.DateField(auto_now=True)
     author = models.ForeignKey(User, related_name='pythonposts', on_delete=models.CASCADE)
-    slug = models.SlugField(allow_unicode=True, unique=True, blank=True)
-
-    def __str__(self):
-        return self.title
-
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.created_at)
-        self.title_html = misaka.html(self.title)
-        super().save(*args, **kwargs)
-
-
-    # def get_absolute_url(self):
-    #     return reverse('pytutorial:single-subtitle', kwargs={"slug": self.slug})
-
-    class Meta:
-        ordering = ["-created_at"]
-
-
-
-class ContentBlock(models.Model):
-    """ A block with additionnal subtitle and content for posts """
-    post = models.ForeignKey(Post, related_name='contentblocks', on_delete=models.CASCADE)
-    subtitle = models.CharField(max_length=100)
-    sub_content = QuillField()
+    title = models.CharField(max_length=100)
+    content = QuillField(null=True)
     created_at = models.DateField(auto_now=True)
     slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
     published_date = models.DateTimeField(blank=True, null=True)
@@ -46,11 +20,11 @@ class ContentBlock(models.Model):
         self.save()
 
     def __str__(self):
-        return self.subtitle
+        return self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.subtitle)
-        self.subtitle_html = misaka.html(self.subtitle)
+        self.slug = slugify(self.title)
+        self.title_html = misaka.html(self.title)
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
