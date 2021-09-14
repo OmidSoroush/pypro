@@ -12,6 +12,7 @@ body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
+  padding: 100px 100px 100px 100px;
 }
 
 a {
@@ -532,7 +533,7 @@ section {
 --------------------------------*/
 #about {
   background: #fff;
-  padding: 150px 0;
+  padding: 50px 0;
 }
 
 #about .about-container .background {
@@ -615,7 +616,7 @@ section {
 #services {
   background: #fff;
   background-size: cover;
-  padding: 150px 0 60px 0;
+  padding: 50px 0 60px 0;
 }
 
 #services .box {
@@ -832,7 +833,7 @@ section {
 
 
 /* python home section end  */
-
+/*
 #pythonpage .accordion1 {
   padding: 100px 0 80px 80px;
 }
@@ -843,7 +844,7 @@ section {
 
 #createform {
   padding: 150px 150px 150px 250px;
-}
+} */
 
 
 

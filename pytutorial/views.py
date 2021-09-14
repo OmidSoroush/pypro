@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
@@ -8,6 +8,8 @@ from django.views.generic.detail import SingleObjectMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import PostForm
 from django.urls import reverse_lazy
+from django.utils import timezone
+
 
 
 
@@ -73,12 +75,14 @@ class PostUpdateView(SuperUserRequiredMixin,UpdateView):
 
 class PostDeleteView(SuperUserRequiredMixin,DeleteView):
     model = Post
-    success_url = reverse_lazy('single-detail')
+    success_url = reverse_lazy('post_list')
 
 class DraftListView(SuperUserRequiredMixin,ListView):
     login_url = '/login/'
-    redirect_field_name = 'pytutorial/python_detail.html'
+    redirect_field_name = 'pytutorial/post_draft_list.html'
     model = Post
+    template_name = 'pytutorial/python_list.html'
+
 
     def get_queryset(self):
         return Post.objects.filter(published_date__isnull=True).order_by('created_at')
@@ -88,4 +92,4 @@ class DraftListView(SuperUserRequiredMixin,ListView):
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('post_detail', pk=pk)
+    return redirect('pytutorial:single-detail', pk=pk)

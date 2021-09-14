@@ -7,7 +7,7 @@ app_name = 'pytutorial'
 
 urlpatterns = [
     path('pythontutorials/list/<slug>/', views.PostListView.as_view(), name='post_list'),
-    path('pythontutorials/<slug>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('pythontutorials/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('index/', views.IndexView.as_view(), name='index'),
     path('post/new/', views.CreatePostView.as_view(), name='post_new'),

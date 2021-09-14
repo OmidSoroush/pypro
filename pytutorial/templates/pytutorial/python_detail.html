@@ -4,7 +4,7 @@
 {% block detail %}
 
   <div class="container">
-    <a href="{% url 'pytutorial:single-detail' slug=post_contents.slug %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
+    <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
 
 
         {% if post_contents.published_date %}

@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django_quill.fields import QuillField
 import misaka
+import datetime
 
 
 
@@ -16,7 +17,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
-        self.published_date = timezone.now()
+        self.published_date = datetime.date.today()
         self.save()
 
     def __str__(self):
@@ -28,4 +29,4 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('pytutorial:single-detail', kwargs={'pk': self.pk, 'slug': self.slug })
+        return reverse('pytutorial:single-detail', kwargs={'pk': self.pk})
