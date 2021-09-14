@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, ContentBlock
+from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.views.generic import (ListView, DetailView,
                                   CreateView, UpdateView, DeleteView)
 from django.views.generic.detail import SingleObjectMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import PostForm
+from django.urls import reverse_lazy
 
 
 
@@ -53,6 +55,13 @@ class PostDetailView(DetailView):
         return context
 
 
+class PythonView(TemplateView):
+    template_name = "pytutorial/python_home.html"
+
+class IndexView(TemplateView):
+    template_name = "pytutorial/index.html"
+
+
 
 class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
     def test_func(self):
@@ -61,14 +70,34 @@ class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
 
 class CreatePostView(SuperUserRequiredMixin, CreateView):
     login_url = '/login/'
-    redirect_field_name = 'blog/post_detail.html'
-
+    redirect_field_name = 'blog/python_detail.html'
     form_class = PostForm
     model = ContentBlock
 
 
-class PythonView(TemplateView):
-    template_name = "pytutorial/python_home.html"
+class PostUpdateView(SuperUserRequiredMixin,UpdateView):
+    login_url = '/login/'
+    redirect_field_name = 'blog/python_detail.html'
+    form_class = PostForm
+    model = ContentBlock
 
-class IndexView(TemplateView):
-    template_name = "pytutorial/index.html"
+
+class PostDeleteView(SuperUserRequiredMixin,DeleteView):
+    model = ContentBlock
+    success_url = reverse_lazy('single-detail')
+
+class DraftListView(SuperUserRequiredMixin,ListView):
+    login_url = '/login/'
+    redirect_field_name = 'pytutorial/post_draft_list.html'
+    model = ContentBlock
+    template_name = 'pytutorial/python_detail.html'
+
+    def get_queryset(self):
+        return ContentBlock.objects.filter(published_date__isnull=True).order_by('created_at')
+
+
+@login_required
+def post_publish(request, slug):
+    post = get_object_or_404(ContentBlock, slug=slug)
+    post.publish()
+    return redirect('single-detail', slug=slug)

@@ -77,6 +77,7 @@
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="{% url 'pytutorial:post_new' %}">New Python Post</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'pytutorial:post_draft_list' %}">Drafts</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -85,6 +86,7 @@
 
   {% block home %}{% endblock home %}
 
+  {% block content %}{% endblock %}
   <main id="main">
 
   {% block about %}{% endblock about %}

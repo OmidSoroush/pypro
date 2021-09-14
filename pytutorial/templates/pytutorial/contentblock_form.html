@@ -2,13 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block createform %}
-<section id="about">
+<section id="createform">
     <h2>New post</h2>
 
     <form method="POST" class="post-form">
     {% csrf_token %}
     {{form|crispy}}
-    <button type="submit" class="save btn btn-default">Save</button>
+    <button type="submit" class="save btn btn-primary">Save</button>
     </form>
   </section>
 {% endblock %}

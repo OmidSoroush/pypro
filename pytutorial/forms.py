@@ -10,7 +10,7 @@ class PostForm(forms.ModelForm):
 
         widgets = {
             'post': forms.TextInput(attrs={'class': 'textinputclass'}),
-            'subtitle': forms.Textarea(attrs={'class': 'postcontent'}),
+            'subtitle': forms.Textarea(attrs={'class': 'textinputclass'}),
         }
 
 #client id: 8c5f651e0834ce0
