@@ -34,7 +34,7 @@
   {{ form.media }}
   {% include 'django_quill/media.html' %}
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
-  <link href="{% static 'blog/quill/quill.css' %}" rel="stylesheet">
+  <link href="{% static "blog/django_quill/django_quill.css" %}" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -222,8 +222,7 @@
   <script src="{% static "blog/js/main.js" %}"></script>
   <script src="{% static "blog/sidebars.js" %}"></script>
 
-  <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
-
+  <script src="{% static "blog/django_quill/django_quill.js" %}"></script>
 
   <!-- Include the highlight.js library -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
