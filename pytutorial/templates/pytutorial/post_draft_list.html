@@ -1,13 +1,15 @@
-{% extends 'pytutorial/base.html' %}
+{% extends 'blog/base.html' %}
 
 {% block createform %}
   <section id="createform">
-    {% for post in posts %}
-        <div class="post">
-            <p class="date">created: {{ post.created_at|date:'d-m-Y' }}</p>
-            <h1><a href="{% url 'pytutorial:single-detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.content|truncatechars:200 }}</p>
-        </div>
-    {% endfor %}
+    <div class="container">
+      {% for post in drafts %}
+          <div class="post">
+              <p class="date">created: {{ post.created_at|date:'d-m-Y' }}</p>
+              <h1><a href="{% url 'pytutorial:single-detail' pk=post.pk %}">{{ post.title }}</a></h1>
+              <p>{{ post.content.html|safe|truncatechars:200 }}</p>
+          </div>
+      {% endfor %}
+    </div>
     </section>
 {% endblock %}

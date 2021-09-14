@@ -1,46 +1,50 @@
-{% extends "pytutorial/python_home.html" %}
+{% extends "blog/base.html" %}
 {% load static %}
 
-{% block accordion %}
-<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-  <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-    <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-    <span class="fs-5 fw-semibold">Collapsible</span>
-  </a>
-  <ul class="list-unstyled ps-0">
-    {% for post in posts %}
-    <li class="mb-1">
-      <a href="{% url 'pytutorial:post_list' slug=post.slug %}" class="btn btn-toggle align-items-center rounded collapsed" role="button">
-        {{post.title}}
-      </a>
-    </li>
-    {% endfor %}
+{% block python %}
+  <section id="pythonpage">
+    <div class="row accordion1">
+      <div class="col-lg-3 navigator order-lg-1 order-2">
+        <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+          <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-5 fw-semibold">Collapsible</span>
+          </a>
+          <ul class="list-unstyled ps-0">
+            {% for post in posts %}
+            <li class="mb-1">
+              <a href="{% url 'pytutorial:post_list' slug=post.slug %}" class="btn btn-toggle align-items-center rounded collapsed" role="button">
+                {{post.title}}
+              </a>
+            </li>
+            {% endfor %}
 
-    <li class="border-top my-3"></li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-        Account
-      </button>
-      <div class="collapse" id="account-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="#" class="link-dark rounded">New...</a></li>
-          <li><a href="#" class="link-dark rounded">Profile</a></li>
-          <li><a href="#" class="link-dark rounded">Settings</a></li>
-          <li><a href="#" class="link-dark rounded">Sign out</a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-</div>
+            <li class="border-top my-3"></li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                Account
+              </button>
+              <div class="collapse" id="account-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">New...</a></li>
+                  <li><a href="#" class="link-dark rounded">Profile</a></li>
+                  <li><a href="#" class="link-dark rounded">Settings</a></li>
+                  <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-{% endblock %}
+        </div>
 
-{% block content %}
+        <div class="col-lg-9 content order-lg-2 order-1">
+          <p>{{single_posts.created_at}}</p>
+          <a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a>
+          <p>{{single_posts.content.html|safe}}</p>
+        </div>
 
-  <div class="col-lg-9 content order-lg-2 order-1">
-    <p>{{single_posts.created_at}}</p>
-    <a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a>
-    <p>{{single_posts.content.html|safe}}</p>
-  </div>
+    </div>
+  </section>
 
 {% endblock %}

@@ -1,4 +1,4 @@
-{% extends "pytutorial/python_home.html" %}
+{% extends "blog/base.html" %}
 {% load static %}
 
 {% block detail %}
@@ -16,7 +16,7 @@
             <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
         {% endif %}
 
-          <p class='postcontent'>{{post_contents.content|safe|linebreaksbr}}</p>
+          <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
 
       {% if user.is_superuser %}
           <a class="btn btn-primary" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fa fa-pencil"></span></a>

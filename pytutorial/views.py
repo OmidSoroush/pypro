@@ -76,16 +76,18 @@ class PostUpdateView(SuperUserRequiredMixin,UpdateView):
 class PostDeleteView(SuperUserRequiredMixin,DeleteView):
     model = Post
     success_url = reverse_lazy('post_list')
+    template_name = 'pytutorial/python_detail.html'
 
 class DraftListView(SuperUserRequiredMixin,ListView):
     login_url = '/login/'
     redirect_field_name = 'pytutorial/post_draft_list.html'
     model = Post
-    template_name = 'pytutorial/python_list.html'
+    template_name = 'pytutorial/post_draft_list.html'
 
-
-    def get_queryset(self):
-        return Post.objects.filter(published_date__isnull=True).order_by('created_at')
+    def get_context_data(self, *args, **kwargs):
+        context = super(DraftListView, self).get_context_data(*args, **kwargs)
+        context['drafts'] = Post.objects.filter(published_date__isnull=True).order_by('created_at')
+        return context
 
 
 @login_required
