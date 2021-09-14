@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block detail %}
-
+  <section id="draftdetail">
   <div class="container">
     <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
 
@@ -24,7 +24,7 @@
       {% endif %}
 
   </div>
-
+</section>
 {% endblock %}
 
 

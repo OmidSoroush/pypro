@@ -26,14 +26,25 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-created_at']
 
+    # def get_context_data(self, **kwargs):
+    #     # Call the base implementation first to get a context
+    #     context = super(PostListView, self).get_context_data(**kwargs)
+    #     # Add in a QuerySet
+    #     context['single_posts'] = Post.objects.get(slug=self.kwargs.get('slug'))
+    #     return context
+
+class PostListView2(ListView):
+    model = Post
+    template_name = 'pytutorial/python_list2.html'
+    context_object_name = 'posts'
+    ordering = ['-created_at']
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
-        context = super(PostListView, self).get_context_data(**kwargs)
+        context = super(PostListView2, self).get_context_data(**kwargs)
         # Add in a QuerySet
         context['single_posts'] = Post.objects.get(slug=self.kwargs.get('slug'))
         return context
-
-
 
 
 class PostDetailView(DetailView):
@@ -75,8 +86,13 @@ class PostUpdateView(SuperUserRequiredMixin,UpdateView):
 
 class PostDeleteView(SuperUserRequiredMixin,DeleteView):
     model = Post
-    success_url = reverse_lazy('post_list')
-    template_name = 'pytutorial/python_detail.html'
+    success_url = reverse_lazy('pytutorial:post_list')
+    # def get_success_url(self, **kwargs):
+    #     # obj = form.instance or self.object
+    #     return reverse_lazy("pytutorial:post_list", kwargs={'slug': self.object.slug})
+
+
+
 
 class DraftListView(SuperUserRequiredMixin,ListView):
     login_url = '/login/'

@@ -38,7 +38,11 @@
 
         </div>
 
-
+        <div class="col-lg-9 content order-lg-2 order-1">
+          <p>{{single_posts.created_at}}</p>
+          <a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a>
+          <p>{{single_posts.content.html|safe}}</p>
+        </div>
 
     </div>
   </section>
