@@ -28,4 +28,4 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('pytutorial:single-detail', kwargs={'slug': self.slug})
+        return reverse('pytutorial:single-detail', kwargs={'pk': self.pk, 'slug': self.slug })

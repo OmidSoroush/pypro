@@ -55,7 +55,7 @@ class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
 
 class CreatePostView(SuperUserRequiredMixin, CreateView):
     login_url = '/login/'
-    redirect_field_name = 'blog/python_detail.html'
+    redirect_field_name = 'pytutorial/python_detail.html'
     form_class = PostForm
     model = Post
 
@@ -66,7 +66,7 @@ class CreatePostView(SuperUserRequiredMixin, CreateView):
 
 class PostUpdateView(SuperUserRequiredMixin,UpdateView):
     login_url = '/login/'
-    redirect_field_name = 'blog/python_detail.html'
+    redirect_field_name = 'pytutorial/python_detail.html'
     form_class = PostForm
     model = Post
 
@@ -85,7 +85,7 @@ class DraftListView(SuperUserRequiredMixin,ListView):
 
 
 @login_required
-def post_publish(request, slug):
-    post = get_object_or_404(Post, slug=slug)
+def post_publish(request, pk):
+    post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('single-detail', slug=slug)
+    return redirect('post_detail', pk=pk)
