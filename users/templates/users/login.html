@@ -2,7 +2,8 @@
 {% load crispy_forms_tags %}
 {% load bootstrap4 %}
 {% block home %}
-    <div class="container">
+  <section id='login_logout'>
+    <div class="container col-lg-4 col-md-6">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -13,10 +14,12 @@
                 <button class="btn btn-outline-info" type="submit">Login</button>
             </div>
         </form>
-        <div class="border-top pt-3">
+        <div class="border-bottom col-lg-4 col-md-6 form-group">
             <small class="text-muted">
                 Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
             </small>
         </div>
     </div>
+  </section>
+
 {% endblock %}

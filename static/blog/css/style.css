@@ -802,6 +802,15 @@ section {
 }
 
 
+/* login logout section*/
+#login_logout {
+  padding: 150px 0px 150px 100px;
+}
+
+#login_logout .form-group {
+  padding: 10px 30px 10px 0px;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
