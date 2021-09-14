@@ -13,14 +13,14 @@
             </div>
 
         {% else %}
-            <a class="btn btn-outline-dark" href="{% url 'post_publish' pk=post_contents.pk %}">Publish</a>
+            <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
         {% endif %}
 
           <p class='postcontent'>{{post_contents.content|safe|linebreaksbr}}</p>
 
       {% if user.is_superuser %}
-          <a class="btn btn-primary" href="{% url 'post_edit' slug=post_contents.slug %}"><span class="fa fa-pencil"></span></a>
-          <a class="btn btn-primary" href="{% url 'post_remove' slug=post_contents.slug %}"><span class="fa fa-remove"></span></a>
+          <a class="btn btn-primary" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fa fa-pencil"></span></a>
+          <a class="btn btn-primary" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
       {% endif %}
 
   </div>
