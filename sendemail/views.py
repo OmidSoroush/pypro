@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 
 # Create your views here.
@@ -24,5 +25,7 @@ def contactView(request):
             return redirect('success')
     return render(request, "blog/base.html", {'form': form})
 
-def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+
+# Home page
+class successView(TemplateView):
+    template_name = 'success.html'

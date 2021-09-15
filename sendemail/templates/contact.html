@@ -1,0 +1,64 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load bootstrap4 %}
+  {% block contact %}
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">Contact</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+      </div>
+
+
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="bi bi-geo-alt"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div>
+                <i class="bi bi-envelope"></i>
+                <p>omidsoroush@t-online.de</p>
+              </div>
+
+              <div>
+                <i class="bi bi-phone"></i>
+                <p>+49 157 7327 4025</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form action="{% url 'sendemail:contact' %}" method="POST">
+                  {% csrf_token %}
+                  <fieldset class="form-group">
+                      <legend class="border-bottom mb-4"></legend>
+                      {{ form|crispy }}
+                  </fieldset>
+                  <div class="form-group">
+                      <button class="btn btn-outline-info" type="submit">Send</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  {% endblock %}

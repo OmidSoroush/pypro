@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block home %}
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container">
+        <h2>Success! Thank you for your message.</h2>
+        <a href="{% url 'blog:blog-home' %}" class="btn-get-started">Go back to home</a>
+      </div>
+    </section><!-- End Hero Section -->
+{% endblock home %}
