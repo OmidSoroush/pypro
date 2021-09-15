@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'pytutorial.apps.PytutorialConfig',
     'users.apps.UsersConfig',
+    'sendemail',
     'crispy_forms',
     'django_quill',
 ]
@@ -165,3 +166,19 @@ QUILL_CONFIGS = {
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# email section
+# config/settings.py
+# config/settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'omidsoroush022@gmail.com'
+# EMAIL_HOST_PASSWORD = ''
+
+# EMAIL_HOST = 'securesmtp.t-online.de'
+# EMAIL_HOST_USER = 'omidsoroush@t-online.de'
+# EMAIL_HOST_PASSWORD = '' # new
+# EMAIL_PORT = 587 # new
+# EMAIL_USE_TLS = True # new
