@@ -690,60 +690,12 @@ section {
 --------------------------------*/
 #contact {
   background: #f7f7f7;
-  padding: 80px 0 40px 0;
+  padding: 120px 0 120px 0;
 }
 
-
-#contact .info {
-  color: #333333;
+#contact .msgbox {
+  margin: 0 0 30px;
 }
-
-#contact .info i {
-  font-size: 32px;
-  color: #2dc997;
-  float: left;
-  line-height: 0;
-}
-
-#contact .info p {
-  padding: 0 0 10px 50px;
-  margin-bottom: 20px;
-  line-height: 22px;
-  font-size: 14px;
-}
-
-#contact .info .email p {
-  padding-top: 5px;
-}
-
-#contact .social-links {
-  padding: 20px 0;
-}
-
-#contact .social-links a {
-  font-size: 18px;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#contact .social-links a i {
-  line-height: 0;
-}
-
-#contact .social-links a:hover {
-  background: #2dc997;
-  color: #fff;
-}
-
 
 
 @-webkit-keyframes animate-loading {
@@ -801,7 +753,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #343b40;
-  padding: 30px 0;
+  padding: 60px 0;
   color: #fff;
   font-size: 14px;
 }
@@ -817,25 +769,25 @@ section {
   color: #ccc;
 }
 
-#footer .info {
-  color: #333333;
+#footer .row {
+  color: #fff;
 }
 
-#footer .info i {
+#footer .row i {
   font-size: 32px;
-  color: #2dc997;
+  color: #fff;
   float: left;
   line-height: 0;
 }
 
-#footer .info p {
+#footer .row p {
   padding: 0 0 10px 50px;
   margin-bottom: 20px;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
-#footer .info .email p {
+#footer .row .email p {
   padding-top: 10px;
 }
 
