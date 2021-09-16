@@ -1,13 +1,13 @@
 /*!
- * Quill Editor v1.3.6
+ * Quill Editor v1.3.7
  * https://quilljs.com/
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
  */
 .ql-container {
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: Helvetica, Arial, 'Montserrat', sans-serif;
+  font-size: 18px;
   height: 100%;
   margin: 0px;
   position: relative;
@@ -32,7 +32,7 @@
 .ql-editor {
   box-sizing: border-box;
   line-height: 1.42;
-  height: 100%;
+  height: 300px;
   outline: none;
   overflow-y: auto;
   padding: 12px 15px;
@@ -620,7 +620,7 @@
 }
 .ql-snow .ql-editor code,
 .ql-snow .ql-editor pre {
-  background-color: #f0f0f0;
+  background-color: #dedede;
   border-radius: 3px;
 }
 .ql-snow .ql-editor pre {
@@ -630,13 +630,14 @@
   padding: 5px 10px;
 }
 .ql-snow .ql-editor code {
-  font-size: 85%;
+  font-size: 30px;
   padding: 2px 4px;
 }
 .ql-snow .ql-editor pre.ql-syntax {
-  background-color: #23241f;
+  background-color: #d1d1d1;
   color: #f8f8f2;
   overflow: visible;
+  font-size: 20px;
 }
 .ql-snow .ql-editor img {
   max-width: 100%;

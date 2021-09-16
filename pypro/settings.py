@@ -144,8 +144,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 QUILL_CONFIGS = {
     'default':{
-        'theme': 'snow',
         'modules': {
+            'theme':'snow',
             'syntax': True,
             'toolbar': [
                   [{ 'font': [] }, { 'size': [] }],
