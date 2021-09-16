@@ -19,8 +19,10 @@
           <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
 
       {% if user.is_superuser %}
-          <a class="btn btn-primary" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fa fa-pencil"></span></a>
-          <a class="btn btn-primary" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
+        <div class="delet_edit_btn">
+          <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fas fa-pencil-alt"></span></a>
+          <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
+        </div>
       {% endif %}
 
   </div>
