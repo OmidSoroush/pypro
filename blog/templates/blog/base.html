@@ -35,9 +35,7 @@
   <link rel="stylesheet" href="{% static "blog/sidebars.css" %}">
 
   <!-- Add the theme's stylesheet -->
-  <link href="{% static 'blog/quilljs/snow.css' %}" rel="stylesheet">
-  <!-- Main Quill library -->
-
+  
   <!-- Theme included stylesheets -->
 
 
@@ -163,15 +161,11 @@
 
 
   <script>
-    hljs.configure({   // optionally configure hljs
-    languages: ['javascript', 'ruby', 'python']
-    });
     var quill = new Quill('#editor', {
       modules: {
         syntax: true,              // Include syntax module
         toolbar: false,  // Include button in toolbar
       },
-      theme:'snow'
     });
     quill.enable(false);
   </script>
