@@ -613,25 +613,35 @@ section {
 
 /* Services Section
 --------------------------------*/
+
 #services {
-  background: #fff;
-  background-size: cover;
-  padding: 150px 0 60px 0;
+  padding: 70px 0 0px 0;
+  margin:0;
+  height:100%;
+  min-height:100%;
+ }
+
+
+#services .contents{
+  height:50%;
+  width:100%;
 }
 
-#services .box {
+#services .quarter {
   padding: 50px 20px;
-  margin-bottom: 50px;
+  margin: 0px 0 0 0;
   text-align: center;
   border: 1px solid #e6e6e6;
-  height: 200px;
   position: relative;
   background: #fafafa;
+  height: 500px;
+
+  float:left;
 }
 
 #services .icon {
   position: absolute;
-  top: -36px;
+  top: 110px;
   left: calc(50% - 36px);
   transition: 0.2s;
   border-radius: 50%;
@@ -641,8 +651,8 @@ section {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   background: #2dc997;
 }
 
@@ -652,8 +662,10 @@ section {
 
 #services .icon i {
   color: #fff;
-  font-size: 24px;
-  line-height: 0;
+  font-size: 50px;
+  line-height: 10;
+  justify-content: center;
+  align-items: center;
 }
 
 #services .box:hover .icon {
@@ -672,8 +684,9 @@ section {
 #services .title {
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 15px;
+  margin: 15px 0 15px;
   text-transform: uppercase;
+  padding: 170px 70px 0 90px;
 }
 
 #services .title a {
@@ -683,6 +696,7 @@ section {
 #services .description {
   font-size: 14px;
   line-height: 24px;
+  padding: 10px;
 }
 
 
@@ -719,13 +733,16 @@ section {
 
 
 /* python home section end  */
+#pythonpage {
+  padding: 0px 0 500px;
+}
 
 #pythonpage .accordion1 {
   padding: 100px 0 80px 150px;
 }
 
 #pythonpage .content {
-  padding: 30px 100px 80px 0px;
+  padding: 30px 100px 450px 0px;
 }
 
 #createform {
@@ -817,4 +834,9 @@ section {
 #footer .social-links a:hover {
   background: #2dc997;
   color: #fff;
+}
+
+#highlight, #highlight:hover, #highlight:active, #highlight:focus {
+    color: #b1e6a8;
+
 }
