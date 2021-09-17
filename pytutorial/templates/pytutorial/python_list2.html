@@ -3,12 +3,12 @@
 
 {% block python %}
   <section id="pythonpage">
-    <div class="row accordion1">
-      <div class="col-lg-3 navigator order-lg-1 order-2">
+    <div class="row">
+      <div class="col-3 navigator" align="left">
         <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
           <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
             <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            <span class="fs-5 fw-semibold">Collapsible</span>
+            <span class="fs-5 fw-semibold align-items-left">Python Tutorials</span>
           </a>
           <ul class="list-unstyled ps-0">
             {% for post in posts %}
@@ -38,10 +38,14 @@
 
         </div>
 
-        <div class="col-lg-9 content order-lg-2 order-1">
-          <p>{{single_posts.created_at}}</p>
-          <a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a>
-          <div id="editor">
+        <div class="col-9 content">
+          <div class="date" >
+            <i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at}}</span>
+          </div>
+          <div class="title" align="center">
+            <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
+          </div>
+          <div id="" class="text">
           <p>{{single_posts.content.html|safe}}</p>
           </div>
         </div>
