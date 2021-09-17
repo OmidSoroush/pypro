@@ -765,13 +765,24 @@ section {
 
 /* login logout section*/
 #login_logout {
-  padding: 150px 0px 150px 100px;
+  padding: 150px 0px 220px 100px;
 }
 
 #login_logout .form-group {
   padding: 10px 30px 10px 0px;
 }
 
+#logout {
+  padding: 350px 0px 300px 100px;
+}
+
+#logout .log {
+  padding: 0px 0px 30px 150px;
+}
+
+#register {
+  padding: 150px 0px 140px 100px;
+}
 
 
 /*--------------------------------------------------------------

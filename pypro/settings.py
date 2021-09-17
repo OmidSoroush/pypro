@@ -148,15 +148,16 @@ QUILL_CONFIGS = {
         'modules': {
             'syntax': True,
             'toolbar': [
-                  [{ 'font': [] }, { 'size': [] }],
-                  [ 'bold', 'italic', 'underline', 'strike' ],
-                  [{ 'color': [] }, { 'background': [] }],
-                  [{ 'script': 'super' }, { 'script': 'sub' }],
-                  [{ 'header': '1' }, { 'header': '2' }, 'blockquote', 'code-block' ],
-                  [{ 'list': 'ordered' }, { 'list': 'bullet'}, { 'indent': '-1' }, { 'indent': '+1' }],
-                  [ 'direction', { 'align': [] }],
-                  [ 'link', 'image', 'video', 'formula' ],
-                  [ 'clean' ]
+                [
+                    {'font': []},
+                    {'header': []},
+                    {'align': []},
+                    'bold', 'italic', 'underline', 'strike', 'blockquote',
+                    {'color': []},
+                    {'background': []},
+                ],
+                ['code-block', 'link'],
+                ['clean'],
             ]
         }
     }

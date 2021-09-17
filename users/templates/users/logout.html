@@ -1,12 +1,12 @@
 {% extends "blog/base.html" %}
 {% block home %}
-  <section id='about'>
+  <section id='logout'>
     <div class="container col-lg-4 col-md-6">
       <h2>You have been logged out!</h2>
         <div class="border-top pt-3">
-            <small class="text-muted">
-                <a href="{% url 'login' %}">Log in again</a>
-            </small>
+          <div class="log">
+              <a class="btn btn-primary" href="{% url 'login' %}">Log in again</a>
+          </div>
         </div>
         </div>
   </section>
