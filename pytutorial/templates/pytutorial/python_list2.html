@@ -48,9 +48,11 @@
           <div class="title" align="center">
             <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
           </div>
-          <div id="editor" class="text" style="height:500px">
+          <div id="editor">
+            <div class="text">
           <p>{{single_posts.content.html|safe}}</p>
           </div>
+        </div>
         </div>
 
     </div>

@@ -6,7 +6,7 @@
  */
 .ql-container {
   box-sizing: border-box;
-  font-family: Helvetica, Arial, 'Montserrat', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
   height: 100%;
   margin: 0px;
@@ -31,14 +31,14 @@
 }
 .ql-editor {
   box-sizing: border-box;
-  line-height: 1.42;
-  height: 300px;
+  line-height: 1.8;
+  height: 100%;
   outline: none;
   overflow-y: auto;
   padding: 12px 15px;
   tab-size: 4;
   -moz-tab-size: 4;
-  text-align: left;
+  text-align: justify;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -620,7 +620,7 @@
 }
 .ql-snow .ql-editor code,
 .ql-snow .ql-editor pre {
-  background-color: #dedede;
+  background-color: green;
   border-radius: 3px;
 }
 .ql-snow .ql-editor pre {
@@ -630,14 +630,14 @@
   padding: 5px 10px;
 }
 .ql-snow .ql-editor code {
-  font-size: 30px;
+  font-size: 20px;
   padding: 2px 4px;
 }
 .ql-snow .ql-editor pre.ql-syntax {
-  background-color: #d1d1d1;
-  color: #f8f8f2;
+  background-color: #dedede;
+  color: black;
   overflow: visible;
-  font-size: 20px;
+  font-size: 18px;
 }
 .ql-snow .ql-editor img {
   max-width: 100%;
@@ -646,7 +646,7 @@
   color: #444;
   display: inline-block;
   float: left;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   height: 24px;
   position: relative;
