@@ -3,29 +3,36 @@
 
 {% block detail %}
   <section id="draftdetail">
-  <div class="container">
-    <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
+    <div class="row">
+      <div class="title" align="center">
+        <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
 
 
-        {% if post_contents.published_date %}
-            <div class="date postdate">
-                {{ post_contents.published_date }}
+            {% if post_contents.published_date %}
+                <div class="date postdate">
+                    {{ post_contents.published_date }}
+                </div>
+
+            {% else %}
+                <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
+            {% endif %}
+            <div class="col">
+              <div id="editor">
+                <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
+              </div>
+
             </div>
 
-        {% else %}
-            <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
-        {% endif %}
+          {% if user.is_superuser %}
+            <div class="delet_edit_btn">
+              <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fas fa-pencil-alt"></span></a>
+              <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
+            </div>
+          {% endif %}
 
-          <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
+      </div>
+    </div>
 
-      {% if user.is_superuser %}
-        <div class="delet_edit_btn">
-          <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fas fa-pencil-alt"></span></a>
-          <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
-        </div>
-      {% endif %}
-
-  </div>
 </section>
 {% endblock %}
 

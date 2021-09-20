@@ -41,6 +41,7 @@
   text-align: justify;
   white-space: pre-wrap;
   word-wrap: break-word;
+  margin-top: 35px;
 }
 .ql-editor > * {
   cursor: text;
@@ -634,7 +635,7 @@
   padding: 2px 4px;
 }
 .ql-snow .ql-editor pre.ql-syntax {
-  background-color: #dedede;
+  background-color: #eee;
   color: black;
   overflow: visible;
   font-size: 18px;
