@@ -1,59 +1,99 @@
-<!Doctype html>
-        <html lang="en">
-           <head>
-              <!-- Required meta tags -->
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-              <!-- Bootstrap CSS -->
-              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-              <title>Admin</title>
-           </head>
-           <body>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Slide in menu width scroll</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static "blog/sidebars.css" %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-3 d-none d-sm-block p-0 bg-secondary p-3 min-vh-100">
-                          <h4 class="gray-3">Right bar</h4>
-                          <ul class="list-group mt-4">
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 1 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 2 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 3 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 4 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 5 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 6 </a></li>
-                              <li class="list-unstyled border-0 p-2"> <a href="" class="text-light">Product 7 </a></li>
-                          </ul>
-                      </div>
-                      <div class="col-12 col-sm-9 p-0">
-                          <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                              <a class="navbar-brand" href="#">ADMIN PANEL</a>
-                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                  <span class="navbar-toggler-icon"></span>
-                              </button>
-                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                  <ul class="list-group bg-primary d-block d-sm-none">
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 1 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 2 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 3 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 4 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 5 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 6 </a></li>
-                                      <li class="list-unstyled border-0 p-2"> <a href="" class="text-dark"><i class="fa fa-chevron-right"> </i>   Product 7 </a></li>
-                                  </ul>
-                              </div>
-                          </nav>
-                          <main class="p-4">
-                              My Content
-                          </main>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="switch icon-reorder"></a>
+    </header>
+      <div class="viewport">
+        <aside class="sidebar">
+            <ul>
+              <li><a href="#">Link 1</a>
+                <ul>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Link 5</a>
+                <ul>
+                  <li><a href="#">Link 6</a></li>
+                  <li><a href="#">Link 7</a></li>
+                  <li><a href="#">Link 8</a></li>
+                  <li><a href="#">Link 9</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Link 10</a></li>
+              <li><a href="#">Link 11</a></li>
+              <li><a href="#">Link 12</a></li>
+              <li><a href="#">Link 13</a></li>
+              <li><a href="#">Link 14</a></li>
+              <li><a href="#">Link 15</a></li>
+              <li><a href="#">Link 16</a></li>
+              <li><a href="#">Link 17</a></li>
+              <li><a href="#">Link 18</a></li>
+              <li><a href="#">Link 19</a></li>
+              <li><a href="#">Link 20</a></li>
+              <li><a href="#">Link 21</a></li>
+              <li><a href="#">Link 22</a></li>
+              <li><a href="#">Link 23</a></li>
+              <li><a href="#">Link 23</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <article>
+                <h3>Lorem ipsum dolor sit amet</h3>
 
-                      </div>
-                  </div>
-              </div>
-              <!-- Optional JavaScript -->
-              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-           </body>
-        </html>
+                <p>Nam nec lacus ipsum, ac fringilla massa. Curabitur sed purus in justo aliquet hendrerit at sit amet sem. Vestibulum ac nunc ante. In hac habitasse platea dictumst. Duis id placerat lacus. Pellentesque ac convallis est. Nunc luctus vehicula lectus ac placerat. Integer id lorem vitae arcu egestas bibendum ac et massa. Quisque dictum pulvinar nulla vel sollicitudin.</p>
+            </article>
+            <article>
+                <h3>Curabitur congue erat ac nisi tempus volutpat</h3>
+
+                <p>Donec dictum molestie orci, non tempus nisi mattis non. Ut ut diam leo. Suspendisse potenti. Vestibulum eget faucibus enim. Nam semper scelerisque quam sed adipiscing. Morbi ultrices, risus eget luctus lobortis, massa lorem aliquam eros, et faucibus augue est eget libero. Etiam ut mi sed erat adipiscing laoreet. Aenean sem sapien, viverra sed cursus a, lobortis eget eros. Vestibulum eros sapien, accumsan interdum porta quis, fringilla tristique felis. Sed rhoncus commodo facilisis.</p>
+                            </article>
+            <article>
+                <h3>Praesent in orci id eros</h3>
+
+                <p>Donec sit amet augue ac mauris aliquam consequat. Vestibulum a suscipit augue. Quisque porta aliquam hendrerit. Sed justo orci, egestas eu ultricies vitae, aliquam eget ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut consequat elementum felis in vestibulum. Vivamus porta ante in orci imperdiet dictum. Vestibulum congue risus nec odio vehicula cursus. Maecenas suscipit iaculis ultricies. Aliquam consectetur, ipsum nec semper sagittis, lorem ligula condimentum dui, id elementum purus metus vel massa. Pellentesque cursus vulputate justo, at viverra velit cursus ac. Curabitur sit amet mauris non velit iaculis cursus at at odio.</p>
+
+            </article>
+        </section>
+    </div>
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('a.switch').on('click', function(e) {
+                e.preventDefault();
+                var body = $('body');
+                if(body.hasClass('offcanvas')) {
+                    var offset = -parseInt(body.css('top'));
+                    body.removeClass('offcanvas').css('top', 0).scrollTop(offset);
+                } else {
+                    body.css('top', -window.pageYOffset+'px').addClass('offcanvas');
+                }
+            });
+        });
+    </script>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
