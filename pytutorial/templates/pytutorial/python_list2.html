@@ -3,59 +3,61 @@
 
 {% block python %}
   <section id="pythonpage">
-    <div class="row">
-      <div class="col-md-3" align="left">
-        <div class="navigator">
-          <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-            <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-              <span class="fs-5 fw-semibold align-items-left">Python Tutorials</span>
-            </a>
-            <ul class="list-unstyled ps-0">
-              {% for post in posts %}
-              <li class="mb-1">
-                <a href="{% url 'pytutorial:post_list2' slug=post.slug %}" class="btn btn-toggle align-items-center rounded collapsed" role="button">
-                  {{post.title}}
-                </a>
-              </li>
-              {% endfor %}
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-3" align="left">
+          <div class="navigator">
+            <div class="bg-white">
+              <a href="#" class="d-flex pb-3 mb-3 link-dark border-bottom">
+                <span class="fs-5 fw-semibold align-items-left">Python Tutorials</span>
+              </a>
+              <ul class="list-unstyled ps-0">
+                {% for post in posts %}
+                <li class="mb-1">
+                  <a href="{% url 'pytutorial:post_list2' slug=post.slug %}" class="btn btn-toggle">
+                    {{post.title}}
+                  </a>
+                </li>
+                {% endfor %}
 
-              <li class="border-top my-3"></li>
-              <li class="mb-1">
-                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                  Account
-                </button>
-                <div class="collapse" id="account-collapse">
-                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">New...</a></li>
-                    <li><a href="#" class="link-dark rounded">Profile</a></li>
-                    <li><a href="#" class="link-dark rounded">Settings</a></li>
-                    <li><a href="#" class="link-dark rounded">Sign out</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                    Account
+                  </button>
+                  <div class="collapse" id="account-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li><a href="#" class="link-dark rounded">New...</a></li>
+                      <li><a href="#" class="link-dark rounded">Profile</a></li>
+                      <li><a href="#" class="link-dark rounded">Settings</a></li>
+                      <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            </div>
           </div>
 
-          </div>
-        </div>
 
+          <div class="col-sm-9 content justify-content-center">
+            <div class="date" >
+              <i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at}}</span>
+            </div>
+            <div class="title" align="center">
+              <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
+            </div>
+            <div id="editor">
+              <div class="text">
+            <p>{{single_posts.content.html|safe}}</p>
+            </div>
+          </div>
+          </div>
 
-        <div class="col-md-9 content justify-content-between">
-          <div class="date" >
-            <i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at}}</span>
-          </div>
-          <div class="title" align="center">
-            <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
-          </div>
-          <div id="editor">
-            <div class="text">
-          <p>{{single_posts.content.html|safe}}</p>
-          </div>
-        </div>
-        </div>
-
+      </div>
     </div>
+
   </section>
 
 {% endblock %}

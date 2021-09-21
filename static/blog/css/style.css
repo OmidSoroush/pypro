@@ -557,13 +557,12 @@ img {
 }
 
 #pythonpage .navigator {
-  padding: 50px;
+  padding: 0px;
+  align-content: center;
 }
 
 #pythonpage .content {
   padding: 50px;
-  height: 100%;
-  width: 60%;
 }
 
 #editor {
@@ -575,7 +574,7 @@ img {
 
 /* create form */
 #createform {
-  padding: 150px 0 150px 0;
+  padding: 150px 0 230px 0;
 }
 
 #createform .sendbutton {
@@ -584,7 +583,7 @@ img {
 
 
 #draftdetail {
-  padding: 150px;
+  padding: 150px 0 560px;
   width: 80%
 }
 

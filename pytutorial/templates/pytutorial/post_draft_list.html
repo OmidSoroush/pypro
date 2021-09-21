@@ -1,8 +1,9 @@
 {% extends 'blog/base.html' %}
 
 {% block createform %}
-  <section id="createform">
+  <section id="draftdetail">
     <div class="container">
+      {% if drafts %}
       {% for post in drafts %}
           <div class="post">
               <p class="date">created: {{ post.created_at|date:'d-m-Y' }}</p>
@@ -10,6 +11,11 @@
               <p>{{ post.content.html|safe|truncatechars:200 }}</p>
           </div>
       {% endfor %}
+      {% else %}
+      <div class="d-flex justify-content-center">
+        <p>No drafts</p>
+      </div>
+      {% endif %}
     </div>
     </section>
 {% endblock %}
