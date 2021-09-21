@@ -448,13 +448,14 @@ img {
 }
 
 #services .quarter {
-  padding: 70px 20px;
+  padding: 50px;
   margin: 0px 0 0 0;
   text-align: center;
   border: 1px solid #e6e6e6;
   position: relative;
   background: #fafafa;
   height: 500px;
+  width: 100%;
   float:left;
 }
 
@@ -513,9 +514,10 @@ img {
 }
 
 #services .description {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   padding: 10px;
+  text-align: center;
 }
 
 

@@ -5,8 +5,6 @@
 * License: https://bootstrapmade.com/license/
 */
 
-/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-
 
 // Hide Navbar on scroll down
 var prevScrollpos = window.pageYOffset;
