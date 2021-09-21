@@ -5,12 +5,11 @@
   <section id="pythonpage">
     <div class="container">
       <div class="row justify-content-md-center">
-        <div class="col-md-3" align="left" id="sidebar">
-          <div class="navigator collapse navbar-collapse">
-            <div class="bg-white">
+        <div class="col-md-3 d-none d-sm-block" align="left">
+          <div class="card">
+            <div class="card-header bg-white">
               <a href="#" class="d-flex pb-3 mb-3 link-dark border-bottom">
-                <span class="fs-5 fw-semibold align-items-left">Python Tutorials</span>
-              </a>
+                <span class="fs-5 fw-semibold align-items-left">Python Tutorials</span></a>
               <ul class="list-unstyled ps-0">
                 {% for post in posts %}
                 <li class="mb-1">
@@ -21,19 +20,6 @@
                 {% endfor %}
 
                 <li class="border-top my-3"></li>
-                <li class="mb-1">
-                  <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                    Account
-                  </button>
-                  <div class="collapse" id="account-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="link-dark rounded">New...</a></li>
-                      <li><a href="#" class="link-dark rounded">Profile</a></li>
-                      <li><a href="#" class="link-dark rounded">Settings</a></li>
-                      <li><a href="#" class="link-dark rounded">Sign out</a></li>
-                    </ul>
-                  </div>
-                </li>
               </ul>
             </div>
 

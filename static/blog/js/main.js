@@ -5,6 +5,9 @@
 * License: https://bootstrapmade.com/license/
 */
 
+$('a.sidebar-toggle').click(function () {
+   $('#sidebar').sidebar('toggle')
+ })
 
 // Hide Navbar on scroll down
 var prevScrollpos = window.pageYOffset;
