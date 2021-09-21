@@ -13,11 +13,8 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
-
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -27,9 +24,7 @@
   <link href="{% static 'blog/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
   <link href="{% static 'blog/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'blog/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-  <link rel="stylesheet" href="https://codebayfront.com/bootstrap5sidebar/bootstrap.min.css">
-	<link rel="icon" href="https://codebayfront.com/bootstrap5sidebar/img/favicon.png">
-	<link rel="canonical" href="https://codebayfront.com/bootstrap5sidebar">
+  <link href="{% static 'blog/navsidebar.css' %}" rel="stylesheet">
 
 
   <!-- Template Main CSS File -->
@@ -40,10 +35,6 @@
   <link rel="stylesheet" href="{% static "blog/quilljs/bubble.css" %}">
   <!-- Theme included stylesheets -->
   {% include 'django_quill/media.html' %}
-
-
-
-
 
 
   </head>
@@ -168,20 +159,20 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
-        <div class="row justify-content-around">
-          <div class="col col-md-auto">
+        <div class="row justify-content-center">
+          <div class="col-md-auto">
             <i class="bi bi-envelope"></i>
             <p>omidsoroush@t-online.de</p>
           </div>
-          <div class="col col-md-auto">
+          <div class="col-md-auto">
             <i class="bi bi-phone"></i> <p>+49 157 7327 4025</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="copyright">
+    <div class="d-flex justify-content-center">
+      <div class="col-md-auto">
         <div class="social-links">
           <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>

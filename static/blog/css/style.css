@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-content .modal-header {
   height: 59px;
-  background-color: #7952b3;
+  background-color: #000;
   position: relative;
   border-radius: 0;
 }
@@ -123,8 +123,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   box-sizing: border-box;
   border-radius: 0;
-  font-size: 16px;
-  padding: 8px 0;
+  font-size: 18px;
+  padding: 15px 0 0 110px;
   color: #fff;
 }
 
@@ -173,21 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.navbar .dropdown .dropdown:hover > ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
 
-@media (max-width: 1366px) {
-  .navbar .dropdown ul {
-    left: -70%;
-  }
-  .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
-  }
-}
 
 
 
@@ -365,13 +351,15 @@ section {
 --------------------------------*/
 #about {
   background: #fff;
-  padding: 200px 0;
+  padding: 10px 0 100px;
 }
 
-#about .about-container .background {
-  min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
-  margin-bottom: 10px;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  height: 65%;
 }
 
 #about .about-container .content {
@@ -447,7 +435,7 @@ section {
 --------------------------------*/
 
 #services {
-  padding: 70px 0 0px 0;
+  padding: 20px 0 0px 0;
   margin:0;
   height:100%;
   min-height:100%;
@@ -460,14 +448,13 @@ section {
 }
 
 #services .quarter {
-  padding: 50px 20px;
+  padding: 70px 20px;
   margin: 0px 0 0 0;
   text-align: center;
   border: 1px solid #e6e6e6;
   position: relative;
   background: #fafafa;
   height: 500px;
-
   float:left;
 }
 
@@ -526,7 +513,7 @@ section {
 }
 
 #services .description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   padding: 10px;
 }
@@ -632,21 +619,11 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #343b40;
-  padding: 60px 0;
+  padding: 60px 0 10px;
   color: #fff;
   font-size: 14px;
 }
 
-#footer .copyright {
-  text-align: center;
-}
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
-}
 
 #footer .row {
   color: #fff;
@@ -672,6 +649,7 @@ section {
 
 #footer .social-links {
   padding: 0px 0;
+  justify-content: center;
 }
 
 #footer .social-links a {
