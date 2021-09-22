@@ -1,99 +1,76 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Slide in menu width scroll</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="{% static "blog/sidebars.css" %}">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <title>CodePen - Simple Sidebar BootStrap 4</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<head>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <a href="#" class="switch icon-reorder"></a>
-    </header>
-      <div class="viewport">
-        <aside class="sidebar">
-            <ul>
-              <li><a href="#">Link 1</a>
-                <ul>
-                  <li><a href="#">Link 2</a></li>
-                  <li><a href="#">Link 3</a></li>
-                  <li><a href="#">Link 4</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Link 5</a>
-                <ul>
-                  <li><a href="#">Link 6</a></li>
-                  <li><a href="#">Link 7</a></li>
-                  <li><a href="#">Link 8</a></li>
-                  <li><a href="#">Link 9</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Link 10</a></li>
-              <li><a href="#">Link 11</a></li>
-              <li><a href="#">Link 12</a></li>
-              <li><a href="#">Link 13</a></li>
-              <li><a href="#">Link 14</a></li>
-              <li><a href="#">Link 15</a></li>
-              <li><a href="#">Link 16</a></li>
-              <li><a href="#">Link 17</a></li>
-              <li><a href="#">Link 18</a></li>
-              <li><a href="#">Link 19</a></li>
-              <li><a href="#">Link 20</a></li>
-              <li><a href="#">Link 21</a></li>
-              <li><a href="#">Link 22</a></li>
-              <li><a href="#">Link 23</a></li>
-              <li><a href="#">Link 23</a></li>
-            </ul>
-        </aside>
-        <section class="content">
-            <article>
-                <h3>Lorem ipsum dolor sit amet</h3>
-
-                <p>Nam nec lacus ipsum, ac fringilla massa. Curabitur sed purus in justo aliquet hendrerit at sit amet sem. Vestibulum ac nunc ante. In hac habitasse platea dictumst. Duis id placerat lacus. Pellentesque ac convallis est. Nunc luctus vehicula lectus ac placerat. Integer id lorem vitae arcu egestas bibendum ac et massa. Quisque dictum pulvinar nulla vel sollicitudin.</p>
-            </article>
-            <article>
-                <h3>Curabitur congue erat ac nisi tempus volutpat</h3>
-
-                <p>Donec dictum molestie orci, non tempus nisi mattis non. Ut ut diam leo. Suspendisse potenti. Vestibulum eget faucibus enim. Nam semper scelerisque quam sed adipiscing. Morbi ultrices, risus eget luctus lobortis, massa lorem aliquam eros, et faucibus augue est eget libero. Etiam ut mi sed erat adipiscing laoreet. Aenean sem sapien, viverra sed cursus a, lobortis eget eros. Vestibulum eros sapien, accumsan interdum porta quis, fringilla tristique felis. Sed rhoncus commodo facilisis.</p>
-                            </article>
-            <article>
-                <h3>Praesent in orci id eros</h3>
-
-                <p>Donec sit amet augue ac mauris aliquam consequat. Vestibulum a suscipit augue. Quisque porta aliquam hendrerit. Sed justo orci, egestas eu ultricies vitae, aliquam eget ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut consequat elementum felis in vestibulum. Vivamus porta ante in orci imperdiet dictum. Vestibulum congue risus nec odio vehicula cursus. Maecenas suscipit iaculis ultricies. Aliquam consectetur, ipsum nec semper sagittis, lorem ligula condimentum dui, id elementum purus metus vel massa. Pellentesque cursus vulputate justo, at viverra velit cursus ac. Curabitur sit amet mauris non velit iaculis cursus at at odio.</p>
-
-            </article>
-        </section>
+<html>
+<div class="d-flex" id="wrapper">
+  <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+      </div>
     </div>
+  <div class="div-push"></div>
+    <!-- /#sidebar-wrapper -->
 
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $('a.switch').on('click', function(e) {
-                e.preventDefault();
-                var body = $('body');
-                if(body.hasClass('offcanvas')) {
-                    var offset = -parseInt(body.css('top'));
-                    body.removeClass('offcanvas').css('top', 0).scrollTop(offset);
-                } else {
-                    body.css('top', -window.pageYOffset+'px').addClass('offcanvas');
-                }
-            });
-        });
-    </script>
-</body>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Simple Sidebar</h1>
+        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+</html>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>

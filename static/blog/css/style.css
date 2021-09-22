@@ -549,23 +549,7 @@ img {
 
 
 /* python home section end  */
-#pythonpage {
-  padding: 120px 0 320px;
-}
 
-#pythonpage .navigator {
-  padding: 0px;
-  align-content: center;
-}
-
-#pythonpage .content {
-  padding: 50px;
-}
-
-#editor {
-  height: 100%;
-  font-size: 18px;
-}
 
 
 
