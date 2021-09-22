@@ -6,12 +6,15 @@
 
 
  #pythonpage {
-   padding: 60px 0 0px 10px;
+   padding: 50px 0 0px 10px;
  }
 
 
  #pythonpage .content {
    padding: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
  }
 
  #editor {
@@ -29,12 +32,14 @@
  }
 
  #sidebar-wrapper .sidebar-heading {
-   padding: 0.875rem 1.25rem;
+   padding: 12px 14px;
    font-size: 1.2rem;
  }
 
- #sidebar-wrapper .list-group {
+ #sidebar-wrapper .list-group li {
    width: 15rem;
+   margin-top: 0px;
+   padding-top: 0px;
  }
 
  #page-content-wrapper {
@@ -60,7 +65,7 @@
    }
  }
  .div-push {
-   width: 10px;
+   width: 2px;
    height: inherit;
    background: #2dc997;
  }
