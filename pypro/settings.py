@@ -182,7 +182,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
 # EMAIL_HOST_PASSWORD = ''
 
 # EMAIL_HOST = 'securesmtp.t-online.de'
-# EMAIL_HOST_USER = 'omidsoroush@t-online.de'
-# EMAIL_HOST_PASSWORD = '' # new
+# EMAIL_HOST_USER = config.get('EMAIL_USER')
+# EMAIL_HOST_PASSWORD = config.get('EMAIL_PASS')
 # EMAIL_PORT = 587 # new
 # EMAIL_USE_TLS = True # new
