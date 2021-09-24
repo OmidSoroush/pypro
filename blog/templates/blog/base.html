@@ -52,7 +52,7 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'blog:blog-tutorials' %}">Tutorials</a></li>
 		<li class="nav-item"><a class="nav-link" href="{% url 'sendemail:contact' %}">Contact</a></li>
 
-        {% if user.is_authenticated %}
+        {% if user.is_staff %}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Post<i style="padding-left:10px" class="fas fa-chevron-down"></i></a>
@@ -63,6 +63,8 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="{% url 'pytutorial:post_draft_list' %}">Drafts</a></li>
+        {% endif %}
+        {% if user.is_authenticated %}
         <li class="nav-item"><a class="nav-link" href="{% url 'users:logout' %}">Log Out</a></li>
         {% else %}
         <li class="nav-item"><a class="nav-link" href="{% url 'users:login' %}">Log In/Sign Up</a></li>
