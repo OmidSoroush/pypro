@@ -1,6 +1,6 @@
-#username: OmidSoroush
-#email: omidsoroush@t-online.de
-#password: Leila0987
+#OmidSoroush
+#omidsoroush@t-online.de
+# Leila0987
 
 from django.urls import path
 from . import views
