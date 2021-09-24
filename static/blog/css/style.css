@@ -574,11 +574,19 @@ img {
 
 /* login logout section*/
 #login_logout {
-  padding: 190px 0px 220px 0px;
+  padding: 10px 0px 220px 0px;
   margin-left: auto;
   margin-right: auto;
   height: auto;
   width: 100%
+}
+
+#login_logout .message {
+  padding: 47px 0px 120px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
 }
 
 #login_logout .form-group {
@@ -587,6 +595,8 @@ img {
   margin-right: auto;
   width: 100%
 }
+
+
 
 #login_logout .loginbtn:hover {
   background-color: #2dc997;
@@ -616,6 +626,8 @@ img {
 #register .regbtn:hover {
   background-color: #2dc997;
 }
+
+
 
 
 /*--------------------------------------------------------------
