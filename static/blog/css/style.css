@@ -107,7 +107,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 40px;
 }
 
-
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
 
 .modal-content .modal-header {
   height: 59px;
@@ -124,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   border-radius: 0;
   font-size: 18px;
-  padding: 15px 0 0 110px;
+  padding: 15px 0 0 50px;
   color: #fff;
 }
 
@@ -664,9 +669,9 @@ img {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   #footer .row p {
-    font-size: 13px;
+    font-size: 12px;
     width: auto;
   }
 }
