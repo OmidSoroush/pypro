@@ -22,7 +22,7 @@ def contactView(request):
                 send_mail(subject, message, from_email, ['omidsoroush@t-online.de'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('success')
+            return redirect('sendemail:success')
     return render(request, "contact.html", {'form': form})
 
 

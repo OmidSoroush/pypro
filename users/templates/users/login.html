@@ -11,7 +11,6 @@
               </div>
             {% endfor %}
           {% endif %}
-          {% block content %}{% endblock %}
         </div>
     <div class="container col-lg-4 col-md-6">
         <form method="POST">
@@ -22,6 +21,9 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info loginbtn" type="submit">Login</button>
+                <small class="text-muted ml-2">
+                  <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                </small>
             </div>
         </form>
         <div class="border-bottom col-lg-4 col-md-6 form-group">

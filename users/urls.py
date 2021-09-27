@@ -1,6 +1,6 @@
 #OmidSoroush
 #omidsoroush@t-online.de
-# Leila0987
+
 
 from django.urls import path
 from . import views

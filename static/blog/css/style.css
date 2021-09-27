@@ -641,8 +641,35 @@ img {
   background-color: #2dc997;
 }
 
+#password_reset {
+  padding: 250px 0px 340px 0px;
+}
 
+#password_reset .requestbtn{
+  margin: 20px;
+  margin-left: inherit;
+}
 
+#password_reset_done{
+  padding: 290px 0px 440px 0px;
+  text-align: center;
+}
+
+#password_reset_done .col-centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#password_reset_confirm {
+  padding: 130px 0px 460px 0px;
+}
+
+#password_reset_confirm .resetbtn{
+  margin: 20px;
+  margin-left: inherit;
+}
 
 /*--------------------------------------------------------------
 # Footer
