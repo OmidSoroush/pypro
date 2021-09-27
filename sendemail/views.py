@@ -7,7 +7,6 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 def contactView(request):
-    recepient_list= ['omidsoroush@t-online.de']
     if request.method == 'GET':
         form = ContactForm()
     else:
