@@ -20,7 +20,7 @@ def contactView(request):
 
             msg_mail = str(first_name) + " " + str(from_email) + " " + str(message)
             try:
-                send_mail(subject, msg_mail, from_email, ['omidsoroush@t-online.de'])
+                send_mail(subject, msg_mail, from_email, ['omidsoroush022@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('sendemail:success')
