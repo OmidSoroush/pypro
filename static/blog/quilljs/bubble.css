@@ -13,6 +13,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .ql-container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: justify;
+  }
 }
 .ql-container.ql-disabled .ql-tooltip {
   visibility: hidden;
@@ -46,6 +56,16 @@
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 768px) {
+  .ql-editor {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: justify;
+  }
+}
+
 .ql-editor > * {
   cursor: text;
 }

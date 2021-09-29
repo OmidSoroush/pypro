@@ -11,7 +11,18 @@
   height: 100%;
   margin: 0px;
   position: relative;
+  text-align: justify;
 }
+
+@media only screen and (max-width: 768px) {
+  .ql-container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: justify;
+  }
+}
+
 .ql-container.ql-disabled .ql-tooltip {
   visibility: hidden;
 }
