@@ -18,7 +18,10 @@
             {% endif %}
             <div class="col">
               <div id="editor">
-                <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
+                <div class="postcontent">
+                  <p class='postcontent'>{{post_contents.content.html|safe|linebreaksbr}}</p>
+                </div>
+
               </div>
 
             </div>
