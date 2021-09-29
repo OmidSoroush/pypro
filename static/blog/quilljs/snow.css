@@ -54,6 +54,16 @@
   word-wrap: break-word;
   margin-top: 35px;
 }
+
+@media only screen and (max-width: 768px) {
+  .ql-editor {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: justify;
+  }
+}
+
 .ql-editor > * {
   cursor: text;
 }
