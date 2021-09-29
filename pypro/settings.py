@@ -165,13 +165,16 @@ QUILL_CONFIGS = {
             'toolbar': [
                 [
                     {'font': []},
+                    {'size': []},
                     {'header': []},
                     {'align': []},
                     'bold', 'italic', 'underline', 'strike', 'blockquote',
                     {'color': []},
                     {'background': []},
                 ],
-                ['code-block', 'link'],
+                [{ 'list': 'ordered' }, { 'list': 'bullet'}, { 'indent': '-1' }, { 'indent': '+1' }],
+                ['code-block', 'link', 'formula'],
+                [{ 'script': 'super' }, { 'script': 'sub' }],
                 ['clean'],
             ]
         }

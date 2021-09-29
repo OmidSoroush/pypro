@@ -10,7 +10,7 @@
 
             {% if post_contents.published_date %}
                 <div class="date postdate">
-                    {{ post_contents.published_date }}
+                    {{ post_contents.published_date|date:"d M Y" }}
                 </div>
 
             {% else %}

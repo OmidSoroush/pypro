@@ -17,7 +17,7 @@
         <div class="div-push"><button class="btn btn-success" id="menu-toggle">Toggle Menu</button></div>
 
       <div class="col-md-auto page-content-wrapper content">
-        <div class="date" ><i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at}}</span></div>
+        <div class="date" ><i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at|date:"d M Y"}}</span></div>
         <div class="title" align="center">
           <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
         </div>
