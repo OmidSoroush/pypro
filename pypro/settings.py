@@ -173,7 +173,7 @@ QUILL_CONFIGS = {
                     {'background': []},
                 ],
                 [{ 'list': 'ordered' }, { 'list': 'bullet'}, { 'indent': '-1' }, { 'indent': '+1' }],
-                ['code-block', 'link', 'formula'],
+                ['code-block', 'link', 'formula', 'image'],
                 [{ 'script': 'super' }, { 'script': 'sub' }],
                 ['clean'],
             ]
