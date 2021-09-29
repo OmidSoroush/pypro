@@ -21,7 +21,7 @@
    height: 100%;
  }
 
- @media (max-width: 500px) {
+ @media (max-width: 768px) {
    #pythonpage .content {
      width: 100%;
      padding-left: 0px;
