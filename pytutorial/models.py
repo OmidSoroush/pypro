@@ -12,7 +12,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, related_name='pythonposts', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     content = QuillField(null=True)
-    created_at = models.DateField(auto_now=True)
+    created_at = models.DateField(auto_now=False)
     slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
