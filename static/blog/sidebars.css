@@ -9,6 +9,9 @@
    padding: 50px 0 0px 0px;
  }
 
+ #pythonpage .date {
+   padding: 0px 0 0px 20px;
+ }
 
  #pythonpage .content {
    padding: 50px;
@@ -21,6 +24,8 @@
  @media only screen and (max-width: 600px) {
    #pythonpage .content {
      width: 100%;
+     padding-left: 0px;
+     padding-right: 0px;
    }
  }
 
