@@ -599,6 +599,28 @@ section {
   }
 }
 
+#draftdetail img {
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  #draftdetail img {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 50%;
+  }
+}
+
 #draftdetail .delet_edit_btn {
   padding: 50px 0 0px 0px;
 }
