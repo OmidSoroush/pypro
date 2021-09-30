@@ -44,15 +44,17 @@
    }
  }
 
- /* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
    #pythonpage .content {
+     margin-left: 0px;
+     margin-right: 0px;
      width: 100%;
      padding-left: 0px;
      padding-right: 0px;
      text-align: justify;
      font-size: 16px;
    }
- } */
+}
 
  #editor {
    height: 100%;
@@ -61,7 +63,7 @@
  }
 
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
    #editor {
      margin-left: 0px;
      margin-right: 0px;
@@ -72,7 +74,7 @@
      font-size: 16px;
      min-width: 0;
    }
-}
+} */
 
 
 
