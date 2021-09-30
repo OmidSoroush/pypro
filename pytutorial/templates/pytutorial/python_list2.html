@@ -19,10 +19,10 @@
       <div class="col-md-auto content">
         <div class="date" ><i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at|date:"d M Y"}}</span></div>
         <div class="title" align="center">
-          <h2 style="padding-top:30px"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
+          <h2 style="padding:20px 0 0px;"><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
         </div>
         <div id="editor">
-          <div class="text">
+          <div class="">
         <p>{{single_posts.content.html|safe}}</p>
         </div>
       </div>
