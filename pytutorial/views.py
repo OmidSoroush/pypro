@@ -24,7 +24,7 @@ class PostListView(ListView):
     model = Post
     template_name = 'pytutorial/python_list.html'
     context_object_name = 'posts'
-    ordering = ['-created_at']
+    ordering = ['created_at']
 
     # def get_context_data(self, **kwargs):
     #     # Call the base implementation first to get a context
@@ -37,7 +37,7 @@ class PostListView2(ListView):
     model = Post
     template_name = 'pytutorial/python_list2.html'
     context_object_name = 'posts'
-    ordering = ['-created_at']
+    ordering = ['created_at']
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
