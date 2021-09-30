@@ -16,17 +16,7 @@
   text-align: justify;
 }
 
-@media only screen and (max-width: 768px) {
-  .ql-container {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    text-align: justify;
-    font-size: 16px;
-  }
-}
+
 .ql-container.ql-disabled .ql-tooltip {
   visibility: hidden;
 }
@@ -61,15 +51,6 @@
   text-align: justify;
 }
 
-@media only screen and (max-width: 768px) {
-  .ql-editor {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    text-align: justify;
-    font-size: 16px;
-  }
-}
 
 .ql-editor > * {
   cursor: text;
