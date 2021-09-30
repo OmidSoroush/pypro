@@ -649,6 +649,13 @@
   overflow: visible;
   font-size: 18px;
 }
+
+@media only screen and (max-width: 768px) {
+  .ql-bubble .ql-editor pre.ql-syntax {
+    font-size: 14px;
+  }
+}
+
 .ql-bubble .ql-editor img {
   max-width: 100%;
 }

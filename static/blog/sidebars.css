@@ -55,7 +55,7 @@
      padding-left: 0px;
      padding-right: 0px;
      text-align: justify;
-     font-size: 16px;
+     font-size: 12px;
    }
 }
 
@@ -66,7 +66,7 @@
  }
 
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
    #editor {
      margin-left: 0px;
      margin-right: 0px;
@@ -74,10 +74,10 @@
      padding-left: 0px;
      padding-right: 0px;
      text-align: justify;
-     font-size: 16px;
+     font-size: 15px;
      min-width: 0;
    }
-} */
+}
 
 
 
