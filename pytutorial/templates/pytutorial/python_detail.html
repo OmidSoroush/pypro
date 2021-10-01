@@ -4,9 +4,11 @@
 {% block detail %}
   <section id="draftdetail">
     <div class="row">
+      <div class="backbtn">
+        <a class="btn btn-success btn-lg" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/"><span class="far fa-arrow-alt-circle-left"></span></a>
+      </div>
       <div class="title" align="center">
         <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
-
 
             {% if post_contents.published_date %}
                 <div class="date postdate">
