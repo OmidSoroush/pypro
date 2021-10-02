@@ -33,4 +33,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('tinymce/', include('tinymce.urls')),
     path('upload_image/', img_views.upload_image),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if settings.DEBUG:
+   urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
