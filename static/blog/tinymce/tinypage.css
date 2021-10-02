@@ -6,11 +6,3 @@ body {
 }
 
 p { margin: 40px; }
-
-code {
-  border-radius: 4px;
-  margin: 50px 0px 50px 0px;
-  padding: 10px 10px 10px 10px;
-  line-height: 2.5;
-  font-size: 14px;
-}
