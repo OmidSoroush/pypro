@@ -36,7 +36,7 @@
     margin-right: auto;
 }
 
-#editor .content .text p,
+/* #editor .content .text p,
 #editor .text ol,
 #editor .text ul,
 #editor .text pre,
@@ -52,4 +52,4 @@
   white-space: pre-wrap;
   line-height: 2;
   counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
-}
+} */
