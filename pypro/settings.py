@@ -161,7 +161,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 20,
     'selector': 'textarea',
-    'content_style': "",
+    'content_css': "/static/blog/tinymce/tinypage.css",
     'theme': 'silver',
     'file_picker_types': 'file image media',
     'images_upload_url': '/upload_image/',
