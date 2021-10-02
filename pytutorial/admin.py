@@ -3,8 +3,14 @@ from .models import Post
 
 
 @admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
-    pass
+class ActivityAdmin(admin.ModelAdmin):
+    list_display = ['title', 'content']
+
+    class Media:
+        js = [
+            'blog/tinymce/jquery.tinymce.min.js',
+            'blog/tinymce/tinymce.min.js',
+        ]
 
 # Register your models here.
 #admin.site.register(Post)

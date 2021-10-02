@@ -33,9 +33,11 @@
   <!-- Add the theme's stylesheet -->
 
 
-  <link rel="stylesheet" href="{% static "blog/quilljs/bubble.css" %}">
   <!-- Theme included stylesheets -->
-  {% include 'django_quill/media.html' %}
+  <link rel="stylesheet" href="{% static "blog/tinymce/code.css" %}">
+  <link rel="stylesheet" href="{% static "blog/tinymce/tinydefault.css" %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/dracula.min.css" integrity="sha512-oDvVpANXrKQ6R5B25VO6DooEQWA7jUXleyD6oUWHChC0fjv8wAANSX7lKXtp5D6HbZ7EUxd0wjMibtpCQ+aCDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{ form.media }}
 
 
   </head>
@@ -202,19 +204,11 @@
 
 
   <!-- Include the highlight.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-  <script>
-    var quill = new Quill('#editor', {
-      modules: {
-        syntax: true,              // Include syntax module
-        toolbar: false,  // Include button in toolbar
-      },
-      theme: 'bubble'
-    });
-    quill.enable(false);
-  </script>
-
+  <script>$(document).ready(function() {
+        $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+    });</script>
 
 </body>
 
