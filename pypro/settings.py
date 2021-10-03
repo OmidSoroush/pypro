@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['127.0.0.1', '49.12.203.203', 'www.datasciencetutorials.org', '
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,10 +80,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -151,8 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 #CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
-#LOGIN_REDIRECT_URL = 'test'
-#LOGOUT_REDIRECT_URL = 'thanks'
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -163,22 +159,18 @@ LOGIN_URL = 'login'
 
 
 CKEDITOR_CONFIGS = {
-    "default": {
-        "removePlugins": "stylesheetparser",
-        'allowedContent': True,
-        'toolbar_Full': [
-        ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ],
-        ['Image', 'Flash', 'Table', 'HorizontalRule'],
-        ['TextColor', 'BGColor'],
-        ['Smiley','sourcearea', 'SpecialChar'],
-        [ 'Link', 'Unlink', 'Anchor' ],
-        [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ],
-        [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ],
-        [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
-        [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ],
-        [ 'Maximize', 'ShowBlocks' ]
-    ],
-    }
+  'default': {
+      'height': 600,
+      'width': '100%',
+      'toolbar': 'full',
+      'extraPlugins': ','.join(
+          [
+              'codesnippet',
+          ]
+
+      ),
+      'codeSnippet_theme': 'monokai_sublime',
+  },
 }
 
 # Default primary key field type
@@ -187,7 +179,6 @@ CKEDITOR_CONFIGS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # email section
-# config/settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
