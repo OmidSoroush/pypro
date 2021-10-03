@@ -10,6 +10,7 @@ class ActivityAdmin(admin.ModelAdmin):
         js = [
             'blog/tinymce/jquery.tinymce.min.js',
             'blog/tinymce/tinymce.min.js',
+            'blog/tinymce/tinydefault.js',
         ]
 
 # Register your models here.
