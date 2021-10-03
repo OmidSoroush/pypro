@@ -1,0 +1,163 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+
+ #pythonpage {
+   padding: 50px 0 0px 0px;
+ }
+
+ #pythonpage .date {
+   padding: 0px 0 0px 15px;
+ }
+
+ #pythonpage .content {
+   padding: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+   height: 100%;
+   text-align: justify;
+   line-height: 2;
+ }
+
+ @media only screen and (max-width: 768px) {
+    #pythonpage .content {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+      text-align: justify;
+      font-size: 12px;
+
+    }
+ }
+
+ #pythonpage img {
+   display: block;
+   padding-left: 0px;
+   padding-right: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 80%;
+   height: 50%;
+ }
+
+ @media only screen and (max-width: 768px) {
+   #pythonpage img {
+     display: block;
+     padding-left: 0px;
+     padding-right: 0px;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 100%;
+     height: auto;
+   }
+ }
+
+
+
+
+
+
+ #sidebar-wrapper {
+   min-height: 100vh;
+   margin-left: -15rem;
+   -webkit-transition: margin 0.25s ease-out;
+   -moz-transition: margin 0.25s ease-out;
+   -o-transition: margin 0.25s ease-out;
+   transition: margin 0.25s ease-out;
+ }
+
+ #sidebar-wrapper .sidebar-heading {
+   padding: 12px 14px;
+   font-size: 1.2rem;
+ }
+
+ #sidebar-wrapper .list-group li {
+   width: 15rem;
+   margin-top: 0px;
+   padding-top: 0px;
+ }
+
+ #page-content-wrapper {
+   min-width: 100vw;
+ }
+
+ #wrapper.toggled #sidebar-wrapper {
+   margin-left: 0;
+ }
+
+ @media (min-width: 768px) {
+   #sidebar-wrapper {
+     margin-left: 0;
+   }
+
+   #page-content-wrapper {
+     min-width: 0;
+     width: 100%;
+   }
+
+   #wrapper.toggled #sidebar-wrapper {
+     margin-left: -15rem;
+   }
+ }
+ .div-push {
+   width: 2px;
+   height: inherit;
+   background: #2dc997;
+ }
+
+#menu-toggle {
+  transform: rotate(90deg);
+  height: 35px;
+  width: 125px;
+  margin: 50px 0 0 -45px;
+  background-color: #2dc997;
+}
+
+#menu-toggle:hover {
+  background-color: #6e450b;
+}
+
+.dropdown-toggle { outline: 0; }
+
+.nav-flush .nav-link {
+  border-radius: 0;
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+  border: 0;
+}
+.btn-toggle:hover,
+.btn-toggle:focus,
+.btn-toggle:visited {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+}
+
+
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}

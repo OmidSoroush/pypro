@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-from tinymce.models import HTMLField
+from ckeditor_uploader.fields import RichTextUploadingField
 import misaka
 import datetime
 
@@ -11,7 +11,7 @@ import datetime
 class Post(models.Model):
     author = models.ForeignKey(User, related_name='pythonposts', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    content = HTMLField(null=True)
+    content = RichTextUploadingField(null=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
     published_date = models.DateTimeField(blank=True, null=True)

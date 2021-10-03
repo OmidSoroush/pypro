@@ -1,17 +1,16 @@
 from django.contrib import admin
 from .models import Post
+from django import forms
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
-@admin.register(Post)
-class ActivityAdmin(admin.ModelAdmin):
-    list_display = ['title', 'content']
+class PostAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+    class Meta:
+        model = Post
+        fields = ('title', 'content')
 
-    class Media:
-        js = [
-            'blog/tinymce/jquery.tinymce.min.js',
-            'blog/tinymce/tinymce.min.js',
-            'blog/tinymce/tinydefault.js',
-        ]
+class PostAdmin(admin.ModelAdmin):
+    form = PostAdminForm
 
-# Register your models here.
-#admin.site.register(Post)
+admin.site.register(Post, PostAdmin)

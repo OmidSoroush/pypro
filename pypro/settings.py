@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'sendemail',
     'crispy_forms',
-    'tinymce',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -138,12 +139,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-#STATICFILES_DIRS = [BASE_DIR / 'static',]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+#CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
 #LOGIN_REDIRECT_URL = 'test'
 #LOGOUT_REDIRECT_URL = 'thanks'
 
@@ -153,42 +160,26 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog:blog-home'
 LOGIN_URL = 'login'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
-TINYMCE_DEFAULT_CONFIG = {
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 20,
-    'selector': 'textarea',
-    'content_css': "/static/blog/tinymce/tinypage.css",
-    'theme': 'silver',
-    'file_picker_types': 'file image media',
-    'images_upload_url': '/upload_image/',
-    'height': 500,
-    'plugins': '''
-            textcolor save link image imageupload media preview codesample contextmenu
-            table code lists fullscreen  insertdatetime  nonbreaking
-            contextmenu directionality searchreplace wordcount visualblocks
-            visualchars code fullscreen autolink lists  charmap print  hr
-            anchor pagebreak spellchecker
-            ''',
-    'toolbar1': '''
-            fullscreen preview bold italic underline | fontselect,
-            fontsizeselect  | forecolor backcolor | alignleft alignright |
-            aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample |
-            ''',
-    'toolbar2': '''
-            visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |removeformat
-            ''',
-    'contextmenu': 'formats | link image',
-    'menubar': True,
-    'statusbar': True,
+CKEDITOR_CONFIGS = {
+    "default": {
+        "removePlugins": "stylesheetparser",
+        'allowedContent': True,
+        'toolbar_Full': [
+        ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ],
+        ['Image', 'Flash', 'Table', 'HorizontalRule'],
+        ['TextColor', 'BGColor'],
+        ['Smiley','sourcearea', 'SpecialChar'],
+        [ 'Link', 'Unlink', 'Anchor' ],
+        [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ],
+        [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ],
+        [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+        [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ],
+        [ 'Maximize', 'ShowBlocks' ]
+    ],
+    }
 }
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
