@@ -8,9 +8,9 @@ class ActivityAdmin(admin.ModelAdmin):
 
     class Media:
         js = [
-            'blog/tinymce/jquery.tinymce.min.js',
-            'blog/tinymce/tinymce.min.js',
-            'blog/tinymce/tinydefault.js',
+            '/static/blog/tinymce/tinydefault.js',
+            '/static/blog/tinymce/jquery.tinymce.min.js',
+            '/static/blog/tinymce/tinymce.min.js',
         ]
 
 # Register your models here.
