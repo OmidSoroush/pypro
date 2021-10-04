@@ -19,8 +19,7 @@ def upload_image(request):
             settings.MEDIA_ROOT,
             'tinymce',
             str(upload_time.year),
-            str(upload_time.month),
-            str(upload_time.day)
+            str(upload_time.month)
         )
         # If there is no such path, create
         if not os.path.exists(path):
@@ -28,7 +27,7 @@ def upload_image(request):
 
         file_path = os.path.join(path, file_obj.name)
 
-        file_url = f'{settings.MEDIA_URL}tinymce/{upload_time.year}/{upload_time.month}/{upload_time.day}/{file_obj.name}'
+        file_url = f'{settings.MEDIA_URL}tinymce/{upload_time.year}/{upload_time.month}/{file_obj.name}'
 
         if os.path.exists(file_path):
             return JsonResponse({
