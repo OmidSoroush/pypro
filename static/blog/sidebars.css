@@ -10,7 +10,11 @@
  }
 
  #pythonpage .date {
-   padding: 0px 0 0px 15px;
+   padding: 0px 0 0px 20px;
+ }
+
+ #pythonpage .title {
+   padding: 0px 0 30px;
  }
 
  #pythonpage .content {
@@ -28,10 +32,10 @@
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
       text-align: justify;
-      font-size: 12px;
+      font-size: 14px;
 
     }
  }

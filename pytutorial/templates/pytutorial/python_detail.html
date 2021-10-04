@@ -3,41 +3,37 @@
 
 {% block detail %}
   <section id="draftdetail">
-    <div class="row">
-      <div class="backbtn">
-        <a class="btn btn-success btn-lg" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/"><span class="far fa-arrow-alt-circle-left"></span></a>
-      </div>
+
       <div class="title" align="center">
         <a href="{% url 'pytutorial:single-detail' pk=post_contents.pk %}"><h1 class='posttitle loader'>{{ post_contents.title }}</h1></a>
-
+      </div>
             {% if post_contents.published_date %}
                 <div class="date postdate">
                     {{ post_contents.published_date|date:"d M Y" }}
                 </div>
 
+
             {% else %}
-                <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
+            <div class="publish_return_btn">
+              <a class="btn btn-outline-dark" href="{% url 'pytutorial:post_publish' pk=post_contents.pk %}">Publish</a>
             {% endif %}
-            <div class="col">
-              <div id="editor">
+              <a class="btn btn-success" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/"><span class="far fa-arrow-alt-circle-left"></span></a>
+            </div>
+            <div id="editor">
                 <div class="text">
                   <p>{{post_contents.content|safe}}</p>
                 </div>
-
-              </div>
-
             </div>
 
           {% if user.is_superuser %}
             <div class="delet_edit_btn">
               <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_edit' pk=post_contents.pk %}"><span class="fas fa-pencil-alt"></span></a>
               <a class="btn btn-primary btn-lg" href="{% url 'pytutorial:post_remove' pk=post_contents.pk %}"><span class="fa fa-remove"></span></a>
+
             </div>
           {% endif %}
 
       </div>
-    </div>
-
 </section>
 {% endblock %}
 

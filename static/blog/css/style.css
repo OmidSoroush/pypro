@@ -27,7 +27,7 @@ a:hover, a:active, a:focus {
 
 p {
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 40px 0 40px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -583,18 +583,32 @@ section {
 
 
 #draftdetail {
-  padding: 100px 0 560px;
+  margin: 80px;
+  padding: 0px 0 0 0;
   margin-left: auto;
   margin-right: auto;
+  width: 70%;
   height: 100%;
-  width: 70%
+}
+
+
+#draftdetail .text {
+  text-align: justify;
+  line-height: 2;
+}
+
+
+#draftdetail .publish_return_btn {
+  padding-left: 0px;
 }
 
 @media only screen and (max-width: 768px) {
   #draftdetail {
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: justify;
   }
 }
@@ -622,11 +636,14 @@ section {
 }
 
 #draftdetail .delet_edit_btn {
-  padding: 50px 0 0px 0px;
+  padding: 2px 0 0px 0px;
+  margin: 10px 0 0 0;
+  text-align: center;
 }
 
 #draftdetail .backbtn {
-  margin: 20px 0 0px 30px;
+  margin: 0px;
+
 }
 
 /* login logout section*/
