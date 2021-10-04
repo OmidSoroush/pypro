@@ -12,3 +12,8 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'content')
+        js = [
+            '/static/blog/tinymce/tinydefault.js',
+            '/static/blog/tinymce/jquery.tinymce.min.js',
+            '/static/blog/tinymce/tinymce.min.js',
+        ]
