@@ -8,7 +8,6 @@ class ActivityAdmin(admin.ModelAdmin):
 
     class Media:
         js = [
-            '/static/blog/tinymce/tinydefault.js',
             '/static/blog/tinymce/jquery.tinymce.min.js',
             '/static/blog/tinymce/tinymce.min.js',
         ]
