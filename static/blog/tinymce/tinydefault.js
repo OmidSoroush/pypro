@@ -14,7 +14,6 @@ script.onload = function(){
 	    'theme': 'silver',
 	    'file_picker_types': 'file image media',
 	    'images_upload_url': '/upload_image/',
-			'file_browser_callback': 'tinymce_filebrowser',
 	    'height': 500,
 	    'plugins': '''
 	            textcolor save link image imageupload media preview codesample contextmenu
