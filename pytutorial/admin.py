@@ -1,16 +1,10 @@
 from django.contrib import admin
 from .models import Post
+from tinymce_filebrowser.admin import MCEFilebrowserAdmin
 
+class MyModelAdmin(MCEFilebrowserAdmin):
+    pass
 
-@admin.register(Post)
-class ActivityAdmin(admin.ModelAdmin):
-    list_display = ['title', 'content']
-
-    class Media:
-        js = [
-            '/static/blog/tinymce/jquery.tinymce.min.js',
-            '/static/blog/tinymce/tinymce.min.js',
-        ]
-
+admin.site.register(Post, MyModelAdmin)
 # Register your models here.
 #admin.site.register(Post)

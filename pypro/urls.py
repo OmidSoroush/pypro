@@ -33,6 +33,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('tinymce/', include('tinymce.urls')),
     path('upload_image/', img_views.upload_image),
+    path('tinymce_filebrowser/', include('tinymce_filebrowser.urls')),
 
 ]
 if settings.DEBUG:

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'sendemail',
     'crispy_forms',
     'tinymce',
+    'tinymce_filebrowser',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },

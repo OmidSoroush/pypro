@@ -1,31 +1,40 @@
-// place this file inside of your static folder with name 'tinyInject.js'
-
 var script = document.createElement('script');
 script.type = 'text/javascript';
 script.src = "https://cdn.tiny.cloud/1/u6d6drp5f5nqzvqu6eujg1dnek4vrscdre339fvjpf0ik7bw/tinymce/5/tinymce.min.js"
 document.head.appendChild(script);
 
+
+
 script.onload = function(){
 	tinymce.init({
-		selector: 'textarea',  // change this value according to your HTML
-
-		// For more info regarding local upload in tinymce https://www.tiny.cloud/docs/demo/local-upload/
-		images_upload_url: '/upload_image/', // Image upload address in Django route
-
-		height: 456,
-		plugins: [
-	  		'advlist autolink link image lists charmap print preview hr anchor pagebreak',
-		  	'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-		  	'table emoticons template paste help maxchars'
-		],
-		toolbar: 'fullscreen | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
-		  	'bullist numlist outdent indent | link image | print preview media fullpage | ' +
-		  	'forecolor backcolor emoticons | uploadimage help ',
-		paste_data_images: true,
-		menu: {
-	  		favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
-		},
-		menubar: 'favs file edit view insert format tools table help',
-		content_css: 'css/content.css'
+		'cleanup_on_startup': True,
+	    'custom_undo_redo_levels': 20,
+	    'selector': 'textarea',
+	    'content_css': "/static/blog/tinymce/tinypage.css",
+	    'theme': 'silver',
+	    'file_picker_types': 'file image media',
+	    'images_upload_url': '/upload_image/',
+			'file_browser_callback': 'tinymce_filebrowser',
+	    'height': 500,
+	    'plugins': '''
+	            textcolor save link image imageupload media preview codesample contextmenu
+	            table code lists fullscreen  insertdatetime  nonbreaking
+	            contextmenu directionality searchreplace wordcount visualblocks
+	            visualchars code fullscreen autolink lists  charmap print  hr
+	            anchor pagebreak spellchecker
+	            ''',
+	    'toolbar1': '''
+	            fullscreen preview bold italic underline | fontselect,
+	            fontsizeselect  | forecolor backcolor | alignleft alignright |
+	            aligncenter alignjustify | indent outdent | bullist numlist table |
+	            | link image media | codesample |
+	            ''',
+	    'toolbar2': '''
+	            visualblocks visualchars |
+	            charmap hr pagebreak nonbreaking anchor |  code |removeformat
+	            ''',
+	    'contextmenu': 'formats | link image',
+	    'menubar': True,
+	    'statusbar': True,
 	})
 }
