@@ -658,9 +658,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #draftdetail .backbtn {
   margin: 0px;
-
 }
 
+#draft {
+  margin: 300px;
+}
+
+#draft .post {
+  text-align: center;
+  
+}
 /* login logout section*/
 #login_logout {
   padding: 10px 0px 220px 0px;
