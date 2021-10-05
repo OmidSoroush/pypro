@@ -5,9 +5,12 @@
  */
 
 
- #pythonpage {
+#pythonpage {
    padding: 50px 0 0px 0px;
+   height: 100%;
+   margin: 0;
  }
+
 
  #pythonpage .date {
    padding: 0px 0 0px 20px;
@@ -64,10 +67,6 @@
  }
 
 
-
-
-
-
  #sidebar-wrapper {
    min-height: 100vh;
    margin-left: -15rem;
@@ -75,6 +74,7 @@
    -moz-transition: margin 0.25s ease-out;
    -o-transition: margin 0.25s ease-out;
    transition: margin 0.25s ease-out;
+   height: 900px;
  }
 
  #sidebar-wrapper .sidebar-heading {

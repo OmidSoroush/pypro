@@ -32,17 +32,17 @@
   #editor .text pre {
     font-size: 12px;
     padding: 10px 10px 10px 10px;
-    margin: 10px 10px 30px 10px;
+    margin: 10px 0px 30px 0px;
     overflow: auto;
   }
 }
 
 #editor .text table {
   font-size: 16px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
   margin-top: 70px;
   margin-bottom: 70px;
-  max-width: 95%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

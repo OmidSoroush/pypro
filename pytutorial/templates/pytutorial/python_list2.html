@@ -15,8 +15,7 @@
             </div>
           </div>
         <div class="div-push"><button class="btn btn-success" id="menu-toggle">Toggle Menu</button></div>
-
-      <div class="col-md-auto content">
+      <div class="col-md-auto content" id="right">
         <div class="date" ><i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at|date:"d M Y"}}</span></div>
         <div class="title" align="center">
           <h2><a href="{% url 'pytutorial:single-detail' pk=single_posts.pk %}">{{single_posts.title}}</a></h2>
@@ -26,10 +25,10 @@
         <p>{{single_posts.content|safe}}</p>
         </div>
       </div>
-      </div>
-
     </div>
+  </div>
   </section>
+
 
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
   <script>
