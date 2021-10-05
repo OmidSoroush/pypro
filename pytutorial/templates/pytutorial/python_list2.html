@@ -4,7 +4,7 @@
 {% block python %}
   <section id="pythonpage">
     <div class="d-flex" id="wrapper">
-      <div class="bg-white border-right" id="sidebar-wrapper">
+      <div class="bg-white border-right" id="sidebar-wrapper" style="overflow:scroll;">
         <div class="sidebar-heading">Python Tutorials</div>
           <div class="list-group list-group-flush">
             <ul class="list-unstyled ps-0">
@@ -12,8 +12,9 @@
                 <li class="mb-1 items"><a href="{% url 'pytutorial:post_list2' slug=post.slug %}" class="btn btn-toggle">{{post.title}}</a></li>
                 {% endfor %}
               </ul>
-            </div>
           </div>
+        </div>
+
         <div class="div-push"><button class="btn btn-success" id="menu-toggle">Toggle Menu</button></div>
       <div class="col-md-auto content" id="right">
         <div class="date" ><i class="far fa-clock">  </i><span style="padding-left:10px">{{  single_posts.created_at|date:"d M Y"}}</span></div>
