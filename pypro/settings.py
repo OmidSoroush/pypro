@@ -13,6 +13,9 @@ import os
 from pathlib import Path
 import json
 
+#sudo chown -R :www-data pypro/media/
+#sudo chmod -R 775 pypro/media
+
 with open('/Users/omidsoroush/Desktop/config/config.json') as config_file:
     config = json.load(config_file)
 
@@ -164,7 +167,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': 'silver',
     'file_picker_types': 'file image media',
     'images_upload_url': '/upload_image/',
-    'height': 500,
+    'height': 700,
     'plugins': '''
             textcolor save link image imageupload media preview codesample contextmenu
             table code lists fullscreen  insertdatetime  nonbreaking
@@ -174,7 +177,7 @@ TINYMCE_DEFAULT_CONFIG = {
             ''',
     'toolbar1': '''
             fullscreen preview bold italic underline | fontselect,
-            fontsizeselect  | forecolor backcolor | alignleft alignright |
+            fontsizeselect  | forecolor backcolor h3 h4 h5 h6 | alignleft alignright |
             aligncenter alignjustify | indent outdent | bullist numlist table |
             | link image media | codesample |
             ''',

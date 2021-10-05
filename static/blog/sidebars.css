@@ -14,7 +14,7 @@
  }
 
  #pythonpage .title {
-   padding: 0px 0 30px;
+   padding: 0px 0 0px;
  }
 
  #pythonpage .content {
@@ -24,7 +24,8 @@
    width: 70%;
    height: 100%;
    text-align: justify;
-   line-height: 2;
+   line-height: 2.2;
+   font-size: 17px;
  }
 
  @media only screen and (max-width: 768px) {

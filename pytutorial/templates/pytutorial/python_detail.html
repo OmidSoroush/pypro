@@ -19,11 +19,14 @@
             {% endif %}
               <a class="btn btn-success" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/"><span class="far fa-arrow-alt-circle-left"></span></a>
             </div>
-            <div id="editor">
-                <div class="text">
-                  <p>{{post_contents.content|safe}}</p>
-                </div>
+            <div class="">
+              <div id="editor">
+                  <div class="text">
+                    <p>{{post_contents.content|safe}}</p>
+                  </div>
+              </div>
             </div>
+
 
           {% if user.is_superuser %}
             <div class="delet_edit_btn">
@@ -35,6 +38,7 @@
 
       </div>
 </section>
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
 {% endblock %}
 
 
