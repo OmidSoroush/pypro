@@ -12,9 +12,12 @@ class Post(models.Model):
     author = models.ForeignKey(User, related_name='pythonposts', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     content = HTMLField(null=True)
-    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    created_at = models.DateTimeField(editable=True, auto_now_add=True)
     slug = models.SlugField(allow_unicode=True, max_length=200, blank=True)
     published_date = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        ordering = ['pk']
 
     def publish(self):
         self.published_date = datetime.date.today()

@@ -37,7 +37,6 @@ class PostListView2(ListView):
     model = Post
     template_name = 'pytutorial/python_list2.html'
     context_object_name = 'posts'
-    ordering = ['created_at']
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -55,7 +54,7 @@ class PostDetailView(DetailView):
     # get a list of all (by default DetailView provides singlewise data)
     def get_context_data(self, *args, **kwargs):
         context = super(PostDetailView, self).get_context_data(*args, **kwargs)
-        context['posts'] = Post.objects.all()
+        context['posts'] = Post.objects.all().order_by('created_at')
         #context['content_list'] = ContentBlock.objects.all()
         #context['b'] = ContentBlock.objects.select_related('post').all() # Forward ForeignKey relationship
         #context['a'] = Post.objects.prefetch_related('contentblocks').all()
@@ -99,6 +98,7 @@ class DraftListView(SuperUserRequiredMixin,ListView):
     redirect_field_name = 'pytutorial/post_draft_list.html'
     model = Post
     template_name = 'pytutorial/post_draft_list.html'
+    ordering = ['created_at']
 
     def get_context_data(self, *args, **kwargs):
         context = super(DraftListView, self).get_context_data(*args, **kwargs)
