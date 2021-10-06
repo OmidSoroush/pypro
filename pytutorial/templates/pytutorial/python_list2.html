@@ -8,9 +8,12 @@
         <div class="sidebar-heading">Python Tutorials</div>
           <div class="list-group list-group-flush">
             <ul class="list-unstyled ps-0">
+              
                 {% for post in posts %}
                 <li class="mb-1 items"><a href="{% url 'pytutorial:post_list2' slug=post.slug %}" class="btn btn-toggle">{{post.title}}</a></li>
+
                 {% endfor %}
+
               </ul>
           </div>
         </div>

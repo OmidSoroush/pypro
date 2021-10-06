@@ -26,6 +26,9 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['created_at']
 
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now())
+
     # def get_context_data(self, **kwargs):
     #     # Call the base implementation first to get a context
     #     context = super(PostListView, self).get_context_data(**kwargs)
@@ -37,6 +40,9 @@ class PostListView2(ListView):
     model = Post
     template_name = 'pytutorial/python_list2.html'
     context_object_name = 'posts'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now())
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -98,7 +104,7 @@ class DraftListView(SuperUserRequiredMixin,ListView):
     redirect_field_name = 'pytutorial/post_draft_list.html'
     model = Post
     template_name = 'pytutorial/post_draft_list.html'
-    ordering = ['created_at']
+
 
     def get_context_data(self, *args, **kwargs):
         context = super(DraftListView, self).get_context_data(*args, **kwargs)
