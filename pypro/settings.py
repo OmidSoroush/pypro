@@ -189,6 +189,15 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'statusbar': True,
     'nonbreaking_force_tab': True,
+    'codesample_languages': [
+        {'text': 'Python', 'value': 'python'},
+        {'text': 'HTML/XML', 'value': 'markup'},
+        {'text': 'JavaScript', 'value': 'javascript'},
+        {'text': 'CSS', 'value': 'css'},
+        {'text': 'PHP', 'value': 'php'},
+        {'text': 'Ruby', 'value': 'ruby'},
+        {'text': 'Java', 'value': 'java'}
+    ]
 }
 
 
