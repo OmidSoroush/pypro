@@ -75,7 +75,6 @@
    -o-transition: margin 0.25s ease-out;
    transition: margin 0.25s ease-out;
    height: 900px;
-   overflow-y: scroll;
  }
 
 
