@@ -11,23 +11,26 @@
 #editor .text pre {
   border-radius: 4px;
   margin: 30px 0px 30px 0px;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 10px 5px 10px;
   line-height: 2.5;
   font-size: 14px;
   overflow: auto;
   tab-size: 4;
+  background-color: #282936;
 }
 
 #editor .text code {
-  border-radius: 4px;
-  margin: 30px 0px 30px 0px;
-  padding: 10px 10px 10px 10px;
-  line-height: 2.5;
+  background-color: #282936;
+  color: #e9e9f4;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 2.5;
   font-size: 14px;
-  overflow: auto;
-  tab-size: 4;
+  padding:0;
 }
-
 
 
 @media only screen and (max-width: 768px) {
