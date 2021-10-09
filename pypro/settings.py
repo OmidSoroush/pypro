@@ -191,14 +191,32 @@ TINYMCE_DEFAULT_CONFIG = {
     'nonbreaking_force_tab': True,
     'codesample_languages': [
         {'text': 'Python', 'value': 'python'},
-        {'text': 'bash', 'value': 'bash'},
+        {'text': 'none', 'value': 'none‚'},
         {'text':"r",'value':"r"},
         {'text': 'HTML/XML', 'value': 'markup'},
         {'text': 'JavaScript', 'value': 'javascript'},
         {'text': 'CSS', 'value': 'css'},
         {'text': 'PHP', 'value': 'php'},
         {'text': 'Ruby', 'value': 'ruby'},
-        {'text': 'Java', 'value': 'java'}
+        {'text': 'Java', 'value': 'java'},
+        {'text':"d",'value':"d"},
+        {'text':"dart",'value':"dart"},
+        {'text':"diff",'value':"diff"},
+        {'text':"docker",'value':"docker"},
+        {'text':"eiffel",'value':"eiffel"},
+        {'text':"elixir",'value':"elixir"},
+        {'text':"erlang",'value':"erlang"},
+        {'text':"fsharp",'value':"fsharp"},
+        {'text':"fortran",'value':"fortran"},
+        {'text':"git",'value':"git"},
+        {'text':"glsl",'value':"glsl"},
+        {'text':"go",'value':"go"},
+        {'text':"groovy",'value':"groovy"},
+        {'text':"haml",'value':"haml"},
+        {'text':"handlebars",'value':"handlebars"},
+        {'text':"haskell",'value':"haskell"},
+        {'text':"haxe",'value':"haxe"},
+        {'text':"http",'value':"http"}
     ]
 }
 

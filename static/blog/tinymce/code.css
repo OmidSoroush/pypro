@@ -11,17 +11,20 @@
   * @author Lea Verou
   */
 
+
+
+
+
  code[class*="language-"],
  pre[class*="language-"] {
+   color: #e9e9f4;
    border-radius: 8px;
    margin: 0px 0px 0px 0px;
-   padding: 20px 10px 20px 20px;
+   padding: 0px 10px 20px 20px;
    line-height: 1.9;
    font-size: 14px;
    overflow: auto;
    tab-size: 4;
-   color: ;
-   background-color: #282936;
  	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
  	direction: ltr;
  	text-align: left;
@@ -128,7 +131,6 @@
  }
 
  .token.function {
- 	color: #DD4A68;
  }
 
  .token.regex,
