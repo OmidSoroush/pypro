@@ -191,7 +191,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'nonbreaking_force_tab': True,
     'codesample_languages': [
         {'text': 'Python', 'value': 'python'},
-        {'text': 'none', 'value': 'none'},
+        {'text': 'bash', 'value': 'bash'},
         {'text':"r",'value':"r"},
         {'text': 'HTML/XML', 'value': 'markup'},
         {'text': 'JavaScript', 'value': 'javascript'},
