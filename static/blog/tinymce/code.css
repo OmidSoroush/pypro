@@ -7,13 +7,12 @@
 
 
 
-
 #editor .text pre {
   font-family: droid sans mono,inconsolata,menlo,consolas,bitstream vera sans mono,courier,monospace;
   border-radius: 8px;
   margin: 0px 0px 0px 0px;
-  padding: 10px 10px 10px 20px;
-  line-height: 1.8;
+  padding: 20px 10px 20px 20px;
+  line-height: 1.9;
   font-size: 14px;
   overflow: auto;
   tab-size: 4;
