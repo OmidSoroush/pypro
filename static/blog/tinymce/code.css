@@ -9,16 +9,25 @@
 
 
 #editor .text pre {
-  border-radius: 4px;
+  border-radius: 8px;
   margin: 0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 14px;
   overflow: auto;
   tab-size: 4;
+  font-weight: lighter;
   background-color: #282936;
 }
 
+@media only screen and (max-width: 768px) {
+  #editor .text pre {
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px 30px 0px;
+    overflow: auto;
+  }
+}
 
 
 #editor .text code {
@@ -29,20 +38,26 @@
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
-	line-height: 2.5;
+	line-height: 1.9;
   font-size: 14px;
   padding:0;
 }
 
-
 @media only screen and (max-width: 768px) {
-  #editor .text pre {
-    font-size: 12px;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 0px 30px 0px;
-    overflow: auto;
+  #editor .text code {
+    background-color: #282936;
+    color: #e9e9f4;
+  	direction: ltr;
+  	text-align: left;
+  	white-space: pre;
+  	word-spacing: normal;
+  	word-break: normal;
+  	line-height: 1.9;
+    padding:0;
+    overflow: scroll;
   }
 }
+
 
 #editor .text table {
   font-size: 16px;
@@ -65,23 +80,3 @@
     margin-right: auto;
   }
 }
-
-
-
-/* #editor .content .text p,
-#editor .text ol,
-#editor .text ul,
-#editor .text pre,
-#editor .text blockquote,
-#editor .text h1,
-#editor .text h2,
-#editor .text h3,
-#editor .text h4,
-#editor .text h5,
-#editor .text h6 {
-  margin-bottom: 200px;
-  padding: 30px;
-  white-space: pre-wrap;
-  line-height: 2;
-  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
-} */
