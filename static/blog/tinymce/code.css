@@ -11,7 +11,15 @@
   * @author Lea Verou
   */
 
-
+@media only screen and (max-width: 768px) {
+  #editor .text code{
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    overflow: scroll;
+  }
+}
 
 
 
