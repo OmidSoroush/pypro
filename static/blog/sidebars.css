@@ -24,7 +24,7 @@
    padding: 50px;
    margin-left: auto;
    margin-right: auto;
-   width: 70%;
+   width: 65%;
    height: 100%;
    text-align: justify;
    line-height: 2.2;
@@ -77,7 +77,9 @@
    height: 900px;
  }
 
-
+#sidebar-wrapper .sidebartitle {
+  font-size: 16px;
+}
 
  #sidebar-wrapper .sidebar-heading {
    padding: 12px 14px;
@@ -85,7 +87,7 @@
  }
 
  #sidebar-wrapper .list-group li {
-   width: 15rem;
+   width: 17rem;
    margin-top: 0px;
    padding-top: 0px;
  }
@@ -109,7 +111,7 @@
    }
 
    #wrapper.toggled #sidebar-wrapper {
-     margin-left: -15rem;
+     margin-left: -17rem;
    }
  }
  .div-push {
