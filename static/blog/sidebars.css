@@ -82,7 +82,7 @@
 }
 
  #sidebar-wrapper .sidebar-heading {
-   padding: 12px 14px;
+   padding: 12px 18px;
    font-size: 1.2rem;
  }
 
@@ -112,6 +112,7 @@
 
    #wrapper.toggled #sidebar-wrapper {
      margin-left: -17rem;
+
    }
  }
  .div-push {
@@ -123,13 +124,15 @@
 #menu-toggle {
   transform: rotate(90deg);
   height: 35px;
-  width: 125px;
-  margin: 50px 0 0 -45px;
+  width: 80px;
+  margin: 26px 0px 0px -22px;
   background-color: #2dc997;
 }
 
 #menu-toggle:hover {
   background-color: #6e450b;
+  height: 35px;
+  width: 80px;
 }
 
 .dropdown-toggle { outline: 0; }
