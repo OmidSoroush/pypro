@@ -30,3 +30,7 @@ def contactView(request):
 # Home page
 class successView(TemplateView):
     template_name = 'success.html'
+
+# Impressum page
+class impressumView(TemplateView):
+    template_name = 'impressum.html'
