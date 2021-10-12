@@ -564,24 +564,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 
 
 /* python home section end  */
@@ -838,5 +820,5 @@ h1, h2, h3, h4, h5, h6 {
 
 #contact .siteinfo, .sitecontact, .responsible {
   line-height: 1;
-  padding: 5px;
+  padding: 1px;
 }

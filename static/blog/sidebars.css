@@ -123,15 +123,15 @@
 
 #menu-toggle {
   transform: rotate(90deg);
-  height: 35px;
+  height: 33px;
   width: 80px;
-  margin: 26px 0px 0px -22px;
+  margin: 27px 0px 0px -22px;
   background-color: #2dc997;
 }
 
 #menu-toggle:hover {
   background-color: #6e450b;
-  height: 35px;
+  height: 33px;
   width: 80px;
 }
 
