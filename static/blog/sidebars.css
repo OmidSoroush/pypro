@@ -123,16 +123,17 @@
 
 #menu-toggle {
   transform: rotate(90deg);
-  height: 33px;
-  width: 80px;
-  margin: 27px 0px 0px -22px;
+  height: 36px;
+  width: 78px;
+  margin: 24px 0px 0px -20px;
   background-color: #2dc997;
+  padding: 2px;
 }
 
 #menu-toggle:hover {
   background-color: #6e450b;
-  height: 33px;
-  width: 80px;
+  height: 36px;
+  width: 78px;
 }
 
 .dropdown-toggle { outline: 0; }

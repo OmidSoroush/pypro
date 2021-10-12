@@ -166,13 +166,15 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <p><i class="bi bi-envelope con_icon" style="padding-right:5px;"></i>omidsoroush@t-online.de</p>
-            <a href="{% url "sendemail:contact" %}">Contact</a>
+          <div class="col justify-content-center">
+            <p class="footeritem"><a href="{% url 'blog:blog-tutorials' %}">Tutorials</a></p>
+            <p class="footeritem"><a href="{% url "sendemail:contact" %}">Contact</a></p>
+
           </div>
-          <div class="col">
-            <p><i class="bi bi-phone con_icon" style="padding-right:5px;"></i>+49 157 7327 4025</p>
-            <a href="{% url "sendemail:impressum" %}">Impressum</a>
+          <div class="col justify-content-center">
+            <p class="footeritem"><a href="{% url 'blog:blog-about' %}">About</a></p>
+            <p class="footeritem"><a href="{% url "sendemail:impressum" %}">Impressum</a></p>
+
           </div>
         </div>
       </div>
@@ -181,9 +183,11 @@
     <div class="d-flex justify-content-center">
       <div class="col-md-auto">
         <div class="social-links">
+
           <a href="##" class="twitter"><i class="bi bi-twitter"></i></a>
           <a href="##" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="##" class="linkedin"><i class="bi bi-linkedin"></i></a>
+
         </div>
       </div>
 
