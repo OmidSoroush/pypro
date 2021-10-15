@@ -462,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #services .contents{
-  height:70%;
+  height:50%;
   width:100%;
 }
 
@@ -473,10 +473,17 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #e6e6e6;
   position: relative;
   background: #fafafa;
-  height: 500px;
+  height: 400px;
   width: 100%;
   float:left;
 }
+
+@media only screen and (max-width: 700px) {
+  #services .quarter {
+    height: 490px;
+  }
+}
+
 
 #services .icon {
   position: absolute;
