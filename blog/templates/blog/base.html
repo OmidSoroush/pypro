@@ -67,7 +67,15 @@
             <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'pytutorial:post_draft_list' %}">Drafts</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Draft<i style="padding-left:10px" class="fas fa-chevron-down"></i></a>
+
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
+            <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
+          </ul>
+        </li>
         {% endif %}
         {% if user.is_authenticated %}
         <li class="nav-item"><a class="nav-link" href="{% url 'users:logout' %}">Logout</a></li>
@@ -114,13 +122,19 @@
 
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="{% url 'pytutorial:post_new' %}">Python</a></li>
-          <li><a class="dropdown-item" href="#">Machine Learning</a></li>
+          <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
         </ul>
       </li>
-      <li class="nav-item">
-				<a class="nav-link" href="{% url 'pytutorial:post_draft_list' %}"><i class="far fa-sticky-note fa-lg"></i><span style="padding-left:10px">Drafts</span>
-				</a>
-			</li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-marker fa-lg"></i><span style="padding-left:10px">Drafts<i style="padding-left:10px" class="fas fa-chevron-down"></i></span>
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
+          <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
+        </ul>
+      </li>
       <li class="nav-item">
 				<a class="nav-link" href="{% url 'users:logout' %}"><i class="bi bi-box-arrow-right fa-lg"></i><span style="padding-left:10px">Log Out</span>
 				</a>
