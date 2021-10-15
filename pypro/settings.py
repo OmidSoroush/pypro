@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'pytutorial.apps.PytutorialConfig',
     'users.apps.UsersConfig',
+    'mlearning.apps.MlearningConfig',
     'sendemail',
     'crispy_forms',
     'tinymce',

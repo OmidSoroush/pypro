@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block python %}
+<section id="pythonpage">
+  <div class="d-flex" id="wrapper">
+    <div class="bg-white border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">ML Tutorials</div>
+        <div class="list-group list-group-flush">
+          <ul class="list-unstyled ps-0">
+              {% for post in posts %}
+              <li class="mb-1 items"><a href="{% url 'mlearning:post_list2' slug=post.slug %}" class="btn btn-toggle sidebartitle">{{post.title|truncatechars:27}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      <div class="div-push"><button class="btn btn-success" id="menu-toggle">Toggle</button></div>
+
+
+
+  </div>
+</section>
+
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script>
+$("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+</script>
+{% endblock %}
