@@ -178,7 +178,7 @@ TINYMCE_DEFAULT_CONFIG = {
             ''',
     'toolbar1': '''
             fullscreen preview bold italic underline | fontselect,
-            fontsizeselect  | forecolor backcolor h3 h4 h5 h6 | alignleft alignright |
+            fontsizeselect  | forecolor backcolor h2 h3 h4 h5 | alignleft alignright |
             aligncenter alignjustify | indent outdent | bullist numlist table |
             | link image media | codesample |
             ''',
