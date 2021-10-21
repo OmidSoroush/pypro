@@ -169,6 +169,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'file_picker_types': 'file image media',
     'images_upload_url': '/upload_image/',
     'height': 700,
+    'external_plugins': { 'tiny_mce_wiris': 'https://www.wiris.net/demo/plugins/tiny_mce/plugin.js' },
     'plugins': '''
             textcolor save link image imageupload media preview codesample contextmenu
             table code lists fullscreen  insertdatetime  nonbreaking
@@ -180,11 +181,11 @@ TINYMCE_DEFAULT_CONFIG = {
             fullscreen preview bold italic underline | fontselect,
             fontsizeselect  | forecolor backcolor h2 h3 h4 h5 | alignleft alignright |
             aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample |
+            | link image media | codesample | tiny_mce_wiris_formulaEditor | tiny_mce_wiris_formulaEditorChemistry |
             ''',
     'toolbar2': '''
             visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |removeformat
+            charmap hr pagebreak nonbreaking anchor | equation code |removeformat
             ''',
     'contextmenu': 'formats | link image',
     'menubar': True,
