@@ -74,7 +74,7 @@
    -moz-transition: margin 0.25s ease-out;
    -o-transition: margin 0.25s ease-out;
    transition: margin 0.25s ease-out;
-   height: 900px;
+   height: 100%;
  }
 
 #sidebar-wrapper .sidebartitle {
