@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('pytutorial.urls', namespace='pytutorial')),
     path('', include('sendemail.urls', namespace='sendemail')),
     path('', include('mlearning.urls', namespace='mlearning')),
+    path('', include('sql.urls', namespace='sql')),
     path('', include('users.urls', namespace='users')),
     path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),

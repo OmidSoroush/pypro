@@ -65,6 +65,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item item" href="{% url 'pytutorial:post_new' %}">Python</a></li>
             <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
+            <li><a class="dropdown-item" href="{% url 'sql:post_new' %}">SQL</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -74,6 +75,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
             <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
+            <li><a class="dropdown-item" href="{% url 'sql:post_draft_list' %}">SQL</a></li>
           </ul>
         </li>
         {% endif %}
@@ -123,6 +125,7 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="{% url 'pytutorial:post_new' %}">Python</a></li>
           <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
+          <li><a class="dropdown-item" href="{% url 'sql:post_new' %}">SQL</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -133,6 +136,7 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
           <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
+          <li><a class="dropdown-item" href="{% url 'sql:post_draft_list' %}">SQL</a></li>
         </ul>
       </li>
       <li class="nav-item">
