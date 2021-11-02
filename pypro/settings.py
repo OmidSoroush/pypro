@@ -195,6 +195,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'codesample_languages': [
         {'text': 'Python', 'value': 'python'},
         {'text': 'none', 'value': 'none‚'},
+        {'text':"SQL",'value':"sql"},
         {'text':"r",'value':"r"},
         {'text': 'HTML/XML', 'value': 'markup'},
         {'text': 'JavaScript', 'value': 'javascript'},
