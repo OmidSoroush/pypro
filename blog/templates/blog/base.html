@@ -53,9 +53,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'blog:blog-home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/">Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.datasciencetutorials.org/sql/list/introduction/">SQL</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.datasciencetutorials.org/mltutorials/list/introduction/">Machine Learning</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.datasciencetutorials.org/pyspark/list/introduction/">PySpark</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'blog:blog-about' %}">About</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'blog:blog-tutorials' %}">Tutorials</a></li>
-		<li class="nav-item"><a class="nav-link" href="{% url 'sendemail:contact' %}">Contact</a></li>
+		<li class="nav-item contact"><a class="nav-link" href="{% url 'sendemail:contact' %}">Contact</a></li>
 
         {% if user.is_staff %}
         <li class="nav-item dropdown">
@@ -66,6 +70,7 @@
             <li><a class="dropdown-item item" href="{% url 'pytutorial:post_new' %}">Python</a></li>
             <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
             <li><a class="dropdown-item" href="{% url 'sql:post_new' %}">SQL</a></li>
+            <li><a class="dropdown-item" href="{% url 'pyspark:post_new' %}">PySpark</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -76,6 +81,7 @@
             <li><a class="dropdown-item item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
             <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
             <li><a class="dropdown-item" href="{% url 'sql:post_draft_list' %}">SQL</a></li>
+            <li><a class="dropdown-item" href="{% url 'pyspark:post_draft_list' %}">PySpark</a></li>
           </ul>
         </li>
         {% endif %}
@@ -104,6 +110,22 @@
 				<a class="nav-link" href="{% url 'blog:blog-home' %}"><i class="bi bi-house-door fa-lg"></i><span style="padding-left:10px">Home</span>
 				</a>
 			</li>
+      <li class="nav-item active">
+				<a class="nav-link" href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/"><i class="fab fa-python fa-lg"></i><span style="padding-left:10px">Python</span>
+				</a>
+			</li>
+      <li class="nav-item active">
+				<a class="nav-link" href="https://www.datasciencetutorials.org/sql/list/introduction/"><i class="fas fa-database fa-lg"></i><span style="padding-left:10px">SQL</span>
+				</a>
+			</li>
+      <li class="nav-item active">
+				<a class="nav-link" href="https://www.datasciencetutorials.org/mltutorials/list/introduction/"><i class="bi bi-graph-up fa-lg"></i><span style="padding-left:10px">Machine Learning</span>
+				</a>
+			</li>
+      <li class="nav-item active">
+				<a class="nav-link" href="https://www.datasciencetutorials.org/pyspark/list/introduction/"><i class="far fa-star fa-lg"></i><span style="padding-left:10px">PySpark</span>
+				</a>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="{% url 'blog:blog-about' %}"><i class="bi bi-file-earmark-person fa-lg"></i><span style="padding-left:10px">About</span>
 				</a>
@@ -126,6 +148,7 @@
           <li><a class="dropdown-item" href="{% url 'pytutorial:post_new' %}">Python</a></li>
           <li><a class="dropdown-item" href="{% url 'mlearning:post_new' %}">Machine Learning</a></li>
           <li><a class="dropdown-item" href="{% url 'sql:post_new' %}">SQL</a></li>
+          <li><a class="dropdown-item" href="{% url 'pyspark:post_new' %}">PySpark</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -137,6 +160,7 @@
           <li><a class="dropdown-item" href="{% url 'pytutorial:post_draft_list' %}">Python</a></li>
           <li><a class="dropdown-item" href="{% url 'mlearning:post_draft_list' %}">Machine Learning</a></li>
           <li><a class="dropdown-item" href="{% url 'sql:post_draft_list' %}">SQL</a></li>
+          <li><a class="dropdown-item" href="{% url 'pyspark:post_draft_list' %}">PySpark</a></li>
         </ul>
       </li>
       <li class="nav-item">
@@ -185,13 +209,17 @@
       <div class="container">
         <div class="row">
           <div class="col justify-content-center">
-            <p class="footeritem"><a href="{% url 'blog:blog-tutorials' %}">Tutorials</a></p>
-            <p class="footeritem"><a href="{% url "sendemail:contact" %}">Contact</a></p>
+            <p class="footeritem"><a href="https://www.datasciencetutorials.org/pythontutorials/list/introduction/">Python</a></p>
+            <p class="footeritem"><a href="https://www.datasciencetutorials.org/sql/list/introduction/">SQL</a></p>
+            <p class="footeritem"><a href="https://www.datasciencetutorials.org/pyspark/list/introduction/">PySpark</a></p>
+            <p class="footeritem"><a href="https://www.datasciencetutorials.org/mltutorials/list/introduction/">Machine Learning</a></p>
 
           </div>
           <div class="col justify-content-center">
             <p class="footeritem"><a href="{% url 'blog:blog-about' %}">About</a></p>
-            <p class="footeritem"><a href="{% url "sendemail:impressum" %}">Impressum</a></p>
+            <p class="footeritem"><a href="{% url 'sendemail:contact' %}">Contact</a></p>
+            <p class="footeritem"><a href="{% url 'blog:blog-tutorials' %}">Tutorials</a></p>
+            <p class="footeritem"><a href="{% url 'sendemail:impressum' %}">Impressum</a></p>
 
           </div>
         </div>

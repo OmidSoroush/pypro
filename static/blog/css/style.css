@@ -111,6 +111,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 40px;
 }
 
+@media screen and (max-width: 1400px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    display: none;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   .navbar-brand {
     margin-left: 10px;
@@ -468,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #services .quarter {
   padding: 50px;
-  margin: 0px 0 0 0;
+  margin: 0px 0 0px 0;
   text-align: center;
   border: 1px solid #e6e6e6;
   position: relative;
@@ -542,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 #services .description {
   font-size: 18px;
   line-height: 30px;
-  padding: 10px;
+  padding: 10px 0 50px;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -759,7 +772,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #footer {
   background: #6e450b;
-  padding: 60px 0 10px;
+  padding: 60px 0px 10px;
   bottom: 0px;
   color: #fff;
   font-size: 14px;
@@ -827,6 +840,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer .footeritem {
   margin: 0px;
+  padding: 0px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
