@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'pytutorial.apps.PytutorialConfig',
     'users.apps.UsersConfig',
     'mlearning.apps.MlearningConfig',
+    'pyspark.apps.PysparkConfig',
     'sql.apps.SqlConfig',
     'sendemail',
     'crispy_forms',
