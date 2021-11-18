@@ -201,7 +201,7 @@ TINYMCE_DEFAULT_CONFIG = {
         {'text': 'HTML/XML', 'value': 'markup'},
         {'text': 'JavaScript', 'value': 'javascript'},
         {'text': 'CSS', 'value': 'css'},
-        {'text': 'PHP', 'value': 'php'},
+        {'text': 'scala', 'value': 'scala'},
         {'text': 'Ruby', 'value': 'ruby'},
         {'text': 'Java', 'value': 'java'},
         {'text':"d",'value':"d"},
