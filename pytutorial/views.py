@@ -24,7 +24,6 @@ class PostListView(ListView):
     model = Post
     template_name = 'pytutorial/python_list.html'
     context_object_name = 'posts'
-    ordering = ['created_at']
 
     def get_queryset(self):
         return Post.objects.filter(published_date__lte=timezone.now())
@@ -40,6 +39,7 @@ class PostListView2(ListView):
     model = Post
     template_name = 'pytutorial/python_list2.html'
     context_object_name = 'posts'
+
 
     def get_queryset(self):
         return Post.objects.filter(published_date__lte=timezone.now())
