@@ -17,7 +17,7 @@
             <div class="publish_return_btn">
               <a class="btn btn-outline-dark" href="{% url 'pyspark:post_publish' pk=post_contents.pk %}">Publish</a>
             {% endif %}
-              <a class="btn btn-success" href="https://www.datasciencetutorials.org/pyspark/list/introduction/"><span class="far fa-arrow-alt-circle-left"></span></a>
+              <a class="btn btn-success" href="{% url 'pyspark:post_list2' slug=post_contents.slug %}"><span class="far fa-arrow-alt-circle-left"></span></a>
             </div>
             <div class="">
               <div id="editor">

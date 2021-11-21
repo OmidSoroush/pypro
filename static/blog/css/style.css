@@ -859,6 +859,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size:14px;
 }
 
-.previous_section{
-  border-top: 4px;
+div.previous_next_section{
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ADACAC;
 }

@@ -29,6 +29,31 @@
         <p>{{single_posts.content|safe}}</p>
         </div>
       </div>
+
+      <div class="previous_next_section"></div>
+      <div class="row justify-content-between">
+          <div class="col-md-auto">
+            {% if single_posts.get_previous_by_created_at %}
+                     <a href="{% url 'pyspark:post_list2' single_posts.get_previous_by_created_at.slug %}">
+                       <button class="btn btn-outline-success btn-lg">
+                       <span class="previous_next">Previous Post: <br></span>
+                        <span class="previous_next_title"><i class="fas fa-chevron-left"></i> {{single_posts.get_previous_by_created_at.title}}</span>
+                      </button>
+                      </a>
+            {% endif %}
+          </div>
+          <div class="col-md-auto">
+            {% if single_posts.get_next_by_created_at %}
+
+                     <a class="" href="{% url 'pyspark:post_list2' single_posts.get_next_by_created_at.slug %}">
+                       <button class="btn btn-outline-success btn-lg">
+                       <span class="previous_next">Next Post: <br></span>
+                       <span class="previous_next_title">{{single_posts.get_next_by_created_at.title}} <i class="fas fa-chevron-right"></i></span>
+                      </button>
+                     </a>
+            {% endif %}
+          </div>
+      </div>
     </div>
   </div>
   </section>

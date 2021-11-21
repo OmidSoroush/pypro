@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="previous_section"></div>
+      <div class="previous_next_section"></div>
       <div class="row justify-content-between">
           <div class="col-md-auto">
             {% if single_posts.get_previous_by_created_at %}
@@ -51,10 +51,8 @@
                        <span class="previous_next_title">{{single_posts.get_next_by_created_at.title}} <i class="fas fa-chevron-right"></i></span>
                       </button>
                      </a>
-
             {% endif %}
           </div>
-
       </div>
 
     </div>
