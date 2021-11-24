@@ -6,9 +6,9 @@ from . import views
 app_name = 'mlearning'
 
 urlpatterns = [
-    path('mltutorials/list/', views.PostListView.as_view(), name='post_list'),
-    path('mltutorials/list/<slug>/', views.PostListView2.as_view(), name='post_list2'),
-    path('mltutorials/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('machinelearning/list/', views.PostListView.as_view(), name='post_list'),
+    path('machinelearning/<slug>/', views.PostListView2.as_view(), name='post_list2'),
+    path('machinelearning/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     #path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('ml/post/new/', views.CreatePostView.as_view(), name='post_new'),
     path('ml/post/<int:pk>/edit/', views.PostUpdateView.as_view(), name='post_edit'),

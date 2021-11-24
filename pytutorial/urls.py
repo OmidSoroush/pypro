@@ -6,9 +6,9 @@ from . import views
 app_name = 'pytutorial'
 
 urlpatterns = [
-    path('pythontutorials/list/', views.PostListView.as_view(), name='post_list'),
-    path('pythontutorials/list/<slug>/', views.PostListView2.as_view(), name='post_list2'),
-    path('pythontutorials/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('python/list/', views.PostListView.as_view(), name='post_list'),
+    path('python/<slug>/', views.PostListView2.as_view(), name='post_list2'),
+    path('python/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     #path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('index/', views.IndexView.as_view(), name='index'),
     path('post/new/', views.CreatePostView.as_view(), name='post_new'),
