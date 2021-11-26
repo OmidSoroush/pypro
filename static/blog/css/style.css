@@ -33,10 +33,10 @@ p {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin: 20px 0 20px 0;
-  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  margin: 70px 0 0px 0;
+  padding: 0px 0 0;
   padding-left: 0px;
 }
 
