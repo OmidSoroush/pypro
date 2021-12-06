@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'mlearning.apps.MlearningConfig',
     'pyspark.apps.PysparkConfig',
+    'dataEngineering.apps.DataengineeringConfig',
     'sql.apps.SqlConfig',
     'sendemail',
     'crispy_forms',
