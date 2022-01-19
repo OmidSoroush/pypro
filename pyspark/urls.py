@@ -6,9 +6,9 @@ from . import views
 app_name = 'pyspark'
 
 urlpatterns = [
-    path('pyspark/list/', views.PostListView.as_view(), name='post_list'),
-    path('pyspark/<slug>/', views.PostListView2.as_view(), name='post_list2'),
-    path('pyspark/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('spark/list/', views.PostListView.as_view(), name='post_list'),
+    path('spark/<slug>/', views.PostListView2.as_view(), name='post_list2'),
+    path('spark/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     #path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('pyspark/post/new/', views.CreatePostView.as_view(), name='post_new'),
     path('pyspark/post/<int:pk>/edit/', views.PostUpdateView.as_view(), name='post_edit'),

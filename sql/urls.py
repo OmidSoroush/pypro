@@ -7,9 +7,9 @@ app_name = 'sql'
 
 
 urlpatterns = [
-    path('sql/list/', views.PostListView.as_view(), name='post_list'),
-    path('sql/<slug>/', views.PostListView2.as_view(), name='post_list2'),
-    path('sql/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('postgres/list/', views.PostListView.as_view(), name='post_list'),
+    path('postgres/<slug>/', views.PostListView2.as_view(), name='post_list2'),
+    path('postgres/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     #path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('sql/post/new/', views.CreatePostView.as_view(), name='post_new'),
     path('sql/post/<int:pk>/edit/', views.PostUpdateView.as_view(), name='post_edit'),

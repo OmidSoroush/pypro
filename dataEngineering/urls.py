@@ -6,9 +6,9 @@ from . import views
 app_name = 'dataEngineering'
 
 urlpatterns = [
-    path('dataEngineering/list/', views.PostListView.as_view(), name='post_list'),
-    path('dataEngineering/<slug>/', views.PostListView2.as_view(), name='post_list2'),
-    path('dataEngineering/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
+    path('data-engineering/list/', views.PostListView.as_view(), name='post_list'),
+    path('data-engineering/<slug>/', views.PostListView2.as_view(), name='post_list2'),
+    path('data-engineering/detail/<int:pk>/', views.PostDetailView.as_view(), name='single-detail'),
     #path('python-home/', views.PythonView.as_view(), name='python-home'),
     path('dataEngineering/post/new/', views.CreatePostView.as_view(), name='post_new'),
     path('dataEngineering/post/<int:pk>/edit/', views.PostUpdateView.as_view(), name='post_edit'),
